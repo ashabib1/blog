@@ -1,0 +1,2417 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.335">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Ben Winjum">
+<meta name="dcterms.date" content="2023-03-06">
+<meta name="description" content="Testing Quarto">
+
+<title>myblog - First File</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">myblog</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../about.html">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/"><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com"><i class="bi bi-twitter" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">First File</h1>
+                  <div>
+        <div class="description">
+          Testing Quarto
+        </div>
+      </div>
+                </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Ben Winjum </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">March 6, 2023</p>
+      </div>
+    </div>
+    
+      <div>
+      <div class="quarto-title-meta-heading">Modified</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date-modified">March 6, 2023</p>
+      </div>
+    </div>
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<section id="fpl-project" class="level1">
+<h1>FPL Project</h1>
+<section id="introduction-to-the-english-premier-league" class="level2">
+<h2 class="anchored" data-anchor-id="introduction-to-the-english-premier-league">Introduction to the English Premier League</h2>
+<p>The English Premier League (EPL), better known as the Premier League, is the top-flight professional football league in England. In addition to being the most competitive football league in the world according to the UEFA Coefficient Ranking, the Premier League is the most-watched sports league in the world, with millions of fans tuning in to watch the weekly matches from all over the globe.</p>
+<p>The league consists of twenty teams from all over England, and the season generally runs from August to May. Every team plays every other team twice, once at home and once away, resulting in a total of 38 games. Winning a game gets the team three points, a draw gets one and a loss gets zero. At the end of the season, the team with the highest number of points is crowned the champions. The three teams with the lowest number of points get relegated to the second tier of English football, also known as the Championship for the following season. Similarly, three of the best teams in the Championship get promoted to the Premier League. Since gaining points is critical for both the top and the bottom of the league, the vast majority of games are fiercely competitive.</p>
+<p>The Premier League is the home of many important and famous football clubs, including Chelsea, Manchester United, Manchester City, Arsenal, and Liverpool, each of whom was champion at least once in the past twenty years. The Premier League has also helped develop many of the world’s best players, including Cristiano Ronaldo, Luis Suarez, Thierry Henry, and Wayne Rooney.</p>
+<p>Overall, the Premier League is a powerhouse in world football, offering fans high-quality football, and competitive matches, featuring some of the biggest and best clubs in the world. Its global popularity is a testament to the league’s influence, and it will undoubtedly attract the world’s best players for years to come.</p>
+</section>
+<section id="introduction-to-fantasy-premier-league" class="level2">
+<h2 class="anchored" data-anchor-id="introduction-to-fantasy-premier-league">Introduction to Fantasy Premier League</h2>
+<p>Fantasy Premier League (FPL) is an online strategy game that casts the player in the role of a Fantasy manager. Each manager assembles a virtual team of real-life football players in the English Premier League and scores points based on their real-life performance in their Premier League matches. The goal for each manager in FPL is to maximise their points by the end of the season.</p>
+<p>At the beginning of the season, managers are allocated a budget of £100 million to build their team of 15 players. Prices of players are assigned at the beginning of the season, then they fluctuate throughout the season based on their performance.</p>
+<p>Points are awarded to players for goals, assists, saves, and clean sheets as well as bonus points, which are awarded to the top-performing individuals in a match. Points can also be taken away for yellow cards, red cards, and goals conceded. A team’s points for the match round or “gameweek” will be scored by the starting XI. There are 38 gameweeks every season; one for each match.</p>
+</section>
+<section id="project-goal" class="level2">
+<h2 class="anchored" data-anchor-id="project-goal">Project Goal</h2>
+<p>FPL is a popular game amongst fans of the English Premier League, as Fantasy managers attempt to build an optimal team of players every gameweek. Fantasy managers can only guess the optimal combination of players because they must pick their teams before any real-life Premier League games occur. In other words, there is <em>uncertainty</em> regarding which players will perform the best. For this project, we will be removing this uncertainty by using the FPL dataset of the 2016-2017 season, which has already recorded the number of points each player attains for every gameweek.</p>
+<p>The goal of this project is to find the optimal combination of players over the 38-week 2016-2017 season that maximises the total number of FPL points. This project can be considered an optimisation problem, because we are attempting to maximise the total number of points of our team in the 2016-2017 season, whilst adhering to a multitude of different constraints.</p>
+</section>
+<section id="constraints-extra-rules" class="level2">
+<h2 class="anchored" data-anchor-id="constraints-extra-rules">Constraints &amp; Extra Rules</h2>
+<p>The main constraints that we will be analysing are:</p>
+<ol type="1">
+<li><p>Position Constraint: Each manager must select a team of 15 players, consisting of 2 goalkeepers, 5 defenders, 5 midfielders, and 3 forwards.</p></li>
+<li><p>Price Constraint: The total price of the 15 players cannot exceed £100 million at the beginning of the season.</p></li>
+<li><p>Formation Constraint: The starting XI of each team must play with a formation of 1 goalkeeper, 3-5 defenders, 2-5 midfielders, and 1-3 forwards. The remaining four players would be on the bench, but the chosen formation can change before each gameweek.</p></li>
+<li><p>Team Constraint: Each manager can have a maximum of three players from the same Premier League team at any point in the season.</p></li>
+<li><p>Transfer Constraint: Each manager is allowed one free transfer per week. Any subsequent transfers result in a four-point deduction for that gameweek. A manager can transfer or “exchange” any of their players for a different player, given that the price constraint still holds.</p></li>
+</ol>
+<p>These constraints will make the calculation of the optimal team more difficult, as we cannot just pick the highest-scoring players from each gameweek. We can classify these constraints into “team-building constraints” and a “team-evaluating constraint”. The first four of these constraints interfere with the building of the team, in the sense that the team would be invalid if they are not satisfied. The last constraint, the transfer constraint is considered a “team-evaluating constraint” because it does not interfere with the building of the team. Having more transfers does not invalidate a team, but rather “punishes” teams for transferring more players by decreasing the total number of points</p>
+<p>There are some extra rules in FPL that can help managers increase their points total. Captaincy should be assigned every week and the Wildcard can be used twice per season. The three chips can only be used in a single gameweek of choice. Here are some more in-depth descriptions of the rules:</p>
+<ol type="1">
+<li><p>Captaincy: One player every week can be named captain. Their points are doubled for that gameweek.</p></li>
+<li><p>Bench Boost Chip: The points scored by the bench players in the next gameweek are included in the points total.</p></li>
+<li><p>Free Hit Chip: Make unlimited free transfers for a single gameweek. At the next deadline, the squad is returned to how it was at the start of the gameweek.</p></li>
+<li><p>Triple Captain Chip: The captain points are tripled instead of doubled for that gameweek.</p></li>
+<li><p>Wildcard: All transfers in the gameweek are free of charge. Each manager gets two wildcards; one in the first half of the season and one in the second half of the season.</p></li>
+</ol>
+</section>
+<section id="introduction-to-the-dataset" class="level2">
+<h2 class="anchored" data-anchor-id="introduction-to-the-dataset">Introduction to the Dataset</h2>
+<p>In order to find the optimal FPL team, we need to use a dataset that includes the gameweek-to-gameweek performances of all players. We decided to use <a href="https://github.com/vaastav/Fantasy-Premier-League">this</a> dataset compiled by Vaastav Anand that includes comprehensive statistics for an array of different features for every player per gameweek, including ‘minutes played’, ‘passes completed’, ‘shots off target’ and even ‘errors leading to a goal attempt’. Key to this project, we will only be needing to use the ‘name’, ‘total points’, ‘price’, ‘position’, ‘team’ and ‘player ID’ features. These features will be key to ensuring that all of the constraints are satisfied. We can take a look at a snippet of the dataset below:</p>
+<div class="cell" data-execution_count="66">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> display</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="67">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> data(gw):</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    gw <span class="op">=</span> pd.read_csv(<span class="st">'gws/gw'</span> <span class="op">+</span> <span class="bu">str</span>(gw) <span class="op">+</span> <span class="st">'.csv'</span>, encoding<span class="op">=</span><span class="st">'latin1'</span>).sort_values(by <span class="op">=</span> <span class="st">'element'</span>).reset_index(drop<span class="op">=</span><span class="va">True</span>).reindex() <span class="co"># Load gameweek data</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    pos_data <span class="op">=</span> pd.read_csv(<span class="st">'players_raw.csv'</span>, encoding<span class="op">=</span><span class="st">'latin1'</span>).rename(columns<span class="op">=</span>{<span class="st">'id'</span>: <span class="st">'element'</span>}) <span class="co"># Load position data</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    gw <span class="op">=</span> pd.merge(gw, pos_data[[<span class="st">'element'</span>, <span class="st">'element_type'</span>,<span class="st">'team'</span>]], on<span class="op">=</span>[<span class="st">'element'</span>], how<span class="op">=</span><span class="st">'left'</span>) <span class="co"># Extract Important Columns from Position data and Merge dataframes</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    gw <span class="op">=</span> gw[[<span class="st">'name'</span>,<span class="st">'total_points'</span>,<span class="st">'value'</span>,<span class="st">'element_type'</span>,<span class="st">'team'</span>,<span class="st">'element'</span>]].rename(columns<span class="op">=</span>{<span class="st">'value'</span>:<span class="st">'price'</span>, <span class="st">'element_type'</span>:<span class="st">'position'</span>, <span class="st">'element'</span>:<span class="st">'unique_id'</span>}) <span class="co"># Extract the important columns</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    gw[<span class="st">'price'</span>] <span class="op">=</span> gw[<span class="st">'price'</span>] <span class="op">/</span> <span class="fl">10.0</span> <span class="co"># Divide the price by ten to fit into the £100 million constraint</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> gw</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>data(<span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="67">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>name</th>
+      <th>total_points</th>
+      <th>price</th>
+      <th>position</th>
+      <th>team</th>
+      <th>unique_id</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>David_Ospina</td>
+      <td>0</td>
+      <td>5.0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Petr_Cech</td>
+      <td>6</td>
+      <td>5.5</td>
+      <td>1</td>
+      <td>1</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Laurent_Koscielny</td>
+      <td>7</td>
+      <td>6.0</td>
+      <td>2</td>
+      <td>1</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Per_Mertesacker</td>
+      <td>0</td>
+      <td>5.0</td>
+      <td>2</td>
+      <td>1</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Gabriel Armando_de Abreu</td>
+      <td>0</td>
+      <td>5.0</td>
+      <td>2</td>
+      <td>1</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>532</th>
+      <td>Steven_Pienaar</td>
+      <td>1</td>
+      <td>5.0</td>
+      <td>3</td>
+      <td>15</td>
+      <td>533</td>
+    </tr>
+    <tr>
+      <th>533</th>
+      <td>Reece_Burke</td>
+      <td>0</td>
+      <td>4.0</td>
+      <td>2</td>
+      <td>20</td>
+      <td>534</td>
+    </tr>
+    <tr>
+      <th>534</th>
+      <td>Ashley_Fletcher</td>
+      <td>1</td>
+      <td>5.0</td>
+      <td>4</td>
+      <td>20</td>
+      <td>535</td>
+    </tr>
+    <tr>
+      <th>535</th>
+      <td>Ryan_Fraser</td>
+      <td>2</td>
+      <td>5.0</td>
+      <td>3</td>
+      <td>2</td>
+      <td>536</td>
+    </tr>
+    <tr>
+      <th>536</th>
+      <td>Thomas_Robson</td>
+      <td>0</td>
+      <td>4.0</td>
+      <td>2</td>
+      <td>15</td>
+      <td>537</td>
+    </tr>
+  </tbody>
+</table>
+<p>537 rows × 6 columns</p>
+</div>
+</div>
+</div>
+<p>This is the dataset for the second gameweek of the 2016-2017 FPL season. In the first column, we have a list of all the players that are in the game. The second column includes the total number of points that the player has scored in this gameweek. For example, the player Petr Cech scored a total of 6 points in this gameweek. The third column is the price of buying the player in this gameweek. This is a very important column because the prices of players fluctuate during the season depending on their performance. For example, a player may start off by costing £5.0 million, but due to great performances may end the season costing £6.2 million. It is critical that we keep track of how the prices of players change because this can affect how we choose our optimal team according to our price constraint. The position column is encoded so that ’1’s are goalkeepers, ’2’s are defenders, ’3’s are midfielders, and ’4’s are forwards. The team column is also encoded for each of the 20 teams in the Premier League. For this project, the team names are not important, we just need to ensure that we do not have more than three players from any one team, as per the team constraint. The unique ID column is also critical to our analysis, as it assigns a number to each player, and we can use this to compare a player’s performance across multiple gameweeks. Let us take a closer look at the total_points, price, position, and team variables to get a more comprehensive idea of how these variables work.</p>
+</section>
+<section id="data-exploration" class="level2">
+<h2 class="anchored" data-anchor-id="data-exploration">Data Exploration</h2>
+<section id="analysing-total-points" class="level4">
+<h4 class="anchored" data-anchor-id="analysing-total-points">Analysing Total Points</h4>
+<p>The total points column is one of the most important columns in this dataset because it is the variable that we are trying to maximise. Before we analyse this column, let’s take a look at the table below, which shows how players can attain points in FPL:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Action</th>
+<th>Points</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Playing up to 60 minutes</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>Playing more than 60 minutes</td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td>Scoring a goal by a goalkeeper or defender</td>
+<td>6</td>
+</tr>
+<tr class="even">
+<td>Scoring a goal by a midfielder</td>
+<td>5</td>
+</tr>
+<tr class="odd">
+<td>Scoring a goal by a forward</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td>Assisting a goal</td>
+<td>3</td>
+</tr>
+<tr class="odd">
+<td>Keeping a clean sheet by a goalkeeper or defender</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td>Keeping a clean sheet by a midfielder</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>Saving three shots by a goalkeeper</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>Saving a penalty</td>
+<td>5</td>
+</tr>
+<tr class="odd">
+<td>Missing a penalty</td>
+<td>-2</td>
+</tr>
+<tr class="even">
+<td>Conceding two goals by a goalkeeper or defender</td>
+<td>-1</td>
+</tr>
+<tr class="odd">
+<td>Getting a yellow card</td>
+<td>-1</td>
+</tr>
+<tr class="even">
+<td>Getting a red card</td>
+<td>-3</td>
+</tr>
+<tr class="odd">
+<td>Scoring an own goal</td>
+<td>-2</td>
+</tr>
+<tr class="even">
+<td>Bonus point for the best players</td>
+<td>1-3</td>
+</tr>
+</tbody>
+</table>
+<p>There is a multitude of different ways for players to gain (or lose) points throughout a game. We can use the table above to figure out how many points a player achieves in a single game. For example, we can deduce that a defender who played 72 minutes and scored a goal, but conceded two goals and got a yellow card would attain 2 + 6 - 1 - 1 = 6 points. It is also possible to get a negative total number of points. For example, a midfielder who played 54 minutes and scored an own goal would be given 1 - 2 = -1 points.</p>
+<p>Let’s now take a look at the distribution of points amongst the players in the second gameweek, and analyse a few of the summary statistics:</p>
+<div class="cell" data-execution_count="68">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame(data(<span class="dv">2</span>)[<span class="st">'total_points'</span>])</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots()</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'total_points'</span>].value_counts().sort_index().plot(ax <span class="op">=</span> ax, kind<span class="op">=</span><span class="st">'bar'</span>, title<span class="op">=</span><span class="st">'Gameweek 2 Points Frequency'</span>, xlabel<span class="op">=</span><span class="st">'Points Attained'</span>, ylabel<span class="op">=</span><span class="st">'Frequency'</span>, color<span class="op">=</span><span class="st">'blue'</span>)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Mean number of points:"</span>, <span class="bu">round</span>(df.mean().item(),<span class="dv">2</span>))</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Standard Deviation:"</span>, <span class="bu">round</span>(df.std().item(),<span class="dv">2</span>))</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Median number of points:"</span>, <span class="bu">round</span>(df.median().item(),<span class="dv">2</span>))</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Proportion of players who attained zero points or less:"</span>, <span class="bu">round</span>(<span class="bu">len</span>(df[df[<span class="st">'total_points'</span>] <span class="op">&lt;=</span> <span class="dv">0</span>]) <span class="op">/</span> <span class="bu">len</span>(df[<span class="st">'total_points'</span>]), <span class="dv">2</span>))</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Proportion of players who attained one or two points:"</span>, <span class="bu">round</span>(<span class="bu">len</span>(df[df[<span class="st">'total_points'</span>] <span class="op">==</span> <span class="dv">1</span>] <span class="op">+</span> df[df[<span class="st">'total_points'</span>] <span class="op">==</span> <span class="dv">2</span>]) <span class="op">/</span> <span class="bu">len</span>(df[<span class="st">'total_points'</span>]), <span class="dv">2</span>))</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Proportion of players who attained three points or more:"</span>, <span class="bu">round</span>(<span class="bu">len</span>(df[df[<span class="st">'total_points'</span>] <span class="op">&gt;=</span> <span class="dv">3</span>]) <span class="op">/</span> <span class="bu">len</span>(df[<span class="st">'total_points'</span>]), <span class="dv">2</span>))</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Proportion of players who attained six points or more:"</span>, <span class="bu">round</span>(<span class="bu">len</span>(df[df[<span class="st">'total_points'</span>] <span class="op">&gt;=</span> <span class="dv">6</span>]) <span class="op">/</span> <span class="bu">len</span>(df[<span class="st">'total_points'</span>]), <span class="dv">2</span>))</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Proportion of players who attained eight points or more:"</span>, <span class="bu">round</span>(<span class="bu">len</span>(df[df[<span class="st">'total_points'</span>] <span class="op">&gt;=</span> <span class="dv">8</span>]) <span class="op">/</span> <span class="bu">len</span>(df[<span class="st">'total_points'</span>]), <span class="dv">2</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><img src="optimiser_files/figure-html/cell-4-output-1.png" class="img-fluid"></p>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Mean number of points: 1.54
+Standard Deviation: 2.5
+Median number of points: 0.0
+Proportion of players who attained zero points or less: 0.51
+Proportion of players who attained one or two points: 0.31
+Proportion of players who attained three points or more: 0.19
+Proportion of players who attained six points or more: 0.1
+Proportion of players who attained eight points or more: 0.04</code></pre>
+</div>
+</div>
+<p>From the above plot, we can see that there are a lot of players that have zero points for the second gameweek, with over 250 players attaining this point total or approximately 51% of the players. The majority of these players were unused substitutes and hence were unable to get attain any points. We can also see that the distribution of the points is right-skewed, as only approximately 19% of the players attained three points or more, and only approximately 10% of the players attained six points or more. The easiest method to attain points in FPL is from the two points given for playing at least 60 minutes, which is why we see a big drop-off in the distribution of points after the second point is attained. The demographic of players we are generally interested in for this project lies within the eight points or more range, as this greater number of points will help us maximise the points over a whole season. Only about 4% of the players have this attribute, so we will be zeroing in on this subset of players when trying to find an optimal combination of players.</p>
+</section>
+<section id="analysing-price" class="level4">
+<h4 class="anchored" data-anchor-id="analysing-price">Analysing Price</h4>
+<p>The price column is a very important column to analyse for this project because the cost of players plays a defining role in the price constraint. Since we have £100 million to spend, we will likely be spending around £100 million / 15 players = £6.6 million per player. Let’s see how the prices of players are distributed in the second gameweek using the histogram below:</p>
+<div class="cell" data-execution_count="69">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame(data(<span class="dv">2</span>)[<span class="st">'price'</span>])</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>plt.hist(df, bins<span class="op">=</span><span class="dv">19</span>, <span class="bu">range</span><span class="op">=</span>(<span class="fl">3.99</span>,<span class="fl">13.49</span>), color<span class="op">=</span> <span class="st">'green'</span>)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Price'</span>)</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Frequency'</span>)</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Gameweek 2 Price Frequency'</span>)</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Mean Price:"</span>, <span class="bu">round</span>(df.mean().item(),<span class="dv">2</span>), <span class="st">"million"</span>)</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Standard Deviation:"</span>, <span class="bu">round</span>(df.std().item(),<span class="dv">2</span>), <span class="st">"million"</span>)</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Median Price:"</span>, <span class="bu">round</span>(df.median().item(),<span class="dv">2</span>), <span class="st">"million"</span>)</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Proportion of players that cost less than £6 million:"</span>, <span class="bu">round</span>(<span class="bu">len</span>(df[df[<span class="st">'price'</span>] <span class="op">&lt;</span> <span class="dv">6</span>]) <span class="op">/</span> <span class="bu">len</span>(df[<span class="st">'price'</span>]), <span class="dv">2</span>))</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Proportion of players that cost between £6 million and £8 million:"</span>, <span class="bu">round</span>(<span class="dv">1</span> <span class="op">-</span> (<span class="bu">len</span>(df[df[<span class="st">'price'</span>] <span class="op">&lt;</span> <span class="dv">6</span>]) <span class="op">+</span> <span class="bu">len</span>(df[df[<span class="st">'price'</span>] <span class="op">&gt;</span> <span class="dv">8</span>])) <span class="op">/</span> <span class="bu">len</span>(df[<span class="st">'price'</span>]), <span class="dv">2</span>))</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Proportion of players that cost more than £8 million:"</span>, <span class="bu">round</span>(<span class="bu">len</span>(df[df[<span class="st">'price'</span>] <span class="op">&gt;</span> <span class="dv">8</span>]) <span class="op">/</span> <span class="bu">len</span>(df[<span class="st">'price'</span>]), <span class="dv">2</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><img src="optimiser_files/figure-html/cell-5-output-1.png" class="img-fluid"></p>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Mean Price: 5.37 million
+Standard Deviation: 1.31 million
+Median Price: 5.0 million
+Proportion of players that cost less than £6 million: 0.77
+Proportion of players that cost between £6 million and £8 million: 0.18
+Proportion of players that cost more than £8 million: 0.05</code></pre>
+</div>
+</div>
+<p>From the histogram plot above, we can see that the vast majority of players cost less than our average spending per player of £6.6 million. 18% of the players have a price near this range, specifically between £6 million and £8 million. Like our total points plot earlier, the price data seems to be right-skewed, as only around 5% of the players are worth more than £8 million.</p>
+<p>The reason why some players are more expensive than others is that they are expected to output more points than players who cost less, but this is not always the case due to the uncertainty when playing Premier League games. Most players are very cheap because they are often substitutes, so for most of the season, they will score zero or one point every gameweek. But do more expensive players output more than the less expensive players? Let’s take a look at the point distribution of the players who cost more than £8 million.</p>
+<div class="cell" data-execution_count="70">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame(data(<span class="dv">2</span>)[data(<span class="dv">2</span>)[<span class="st">'price'</span>]<span class="op">&gt;</span><span class="dv">8</span>][<span class="st">'total_points'</span>])</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots()</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'total_points'</span>].value_counts().sort_index().plot(ax <span class="op">=</span> ax, kind<span class="op">=</span><span class="st">'bar'</span>, title<span class="op">=</span><span class="st">'Gameweek 2 Expensive Player Points Distribution'</span>, xlabel<span class="op">=</span><span class="st">'Points Attained'</span>, ylabel<span class="op">=</span><span class="st">'Frequency'</span>)</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><img src="optimiser_files/figure-html/cell-6-output-1.png" class="img-fluid"></p>
+</div>
+</div>
+<p>We can see that their point distribution includes 10 players who only scored one or two points, and there are even a couple of players who scored zero! On the other hand, there are three expensive players who scored the maximum 13 points, which indicates that investing in certain expensive players pays off. No expensive players scored anywhere between 7 and 12 points this gameweek, so there are some cheaper players who outperformed a lot of the expensive players. Investing money from the £100 million budget in those players may be worthwhile, as they maximise points and minimise the cost.</p>
+<p>Prices of players also fluctuate throughout the season due to performance. Players who perform well increase their price, whilst players who perform poorly, or do not play enough end up with a decrease in their overall price. Let’s take a look at the price distribution of the 38th gameweek, and see how it compares to the second gameweek.</p>
+<div class="cell" data-execution_count="71">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame(data(<span class="dv">38</span>)[<span class="st">'price'</span>])</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>plt.hist(df, bins<span class="op">=</span><span class="dv">19</span>, color<span class="op">=</span><span class="st">'green'</span>)</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Price'</span>)</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Frequency'</span>)</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Gameweek 38 Price Frequency'</span>)</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Mean Price:"</span>, <span class="bu">round</span>(df.mean().item(),<span class="dv">2</span>), <span class="st">"million"</span>)</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Standard Deviation:"</span>, <span class="bu">round</span>(df.std().item(),<span class="dv">2</span>), <span class="st">"million"</span>)</span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Median Price:"</span>, <span class="bu">round</span>(df.median().item(),<span class="dv">2</span>), <span class="st">"million"</span>)</span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Proportion of players that cost less than £6 million:"</span>, <span class="bu">round</span>(<span class="bu">len</span>(df[df[<span class="st">'price'</span>] <span class="op">&lt;</span> <span class="dv">6</span>]) <span class="op">/</span> <span class="bu">len</span>(df[<span class="st">'price'</span>]), <span class="dv">2</span>))</span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Proportion of players that cost between £6 million and £8 million:"</span>, <span class="bu">round</span>(<span class="dv">1</span> <span class="op">-</span> (<span class="bu">len</span>(df[df[<span class="st">'price'</span>] <span class="op">&lt;</span> <span class="dv">6</span>]) <span class="op">+</span> <span class="bu">len</span>(df[df[<span class="st">'price'</span>] <span class="op">&gt;</span> <span class="dv">8</span>])) <span class="op">/</span> <span class="bu">len</span>(df[<span class="st">'price'</span>]), <span class="dv">2</span>))</span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Proportion of players that cost more than £8 million:"</span>, <span class="bu">round</span>(<span class="bu">len</span>(df[df[<span class="st">'price'</span>] <span class="op">&gt;</span> <span class="dv">8</span>]) <span class="op">/</span> <span class="bu">len</span>(df[<span class="st">'price'</span>]), <span class="dv">2</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><img src="optimiser_files/figure-html/cell-7-output-1.png" class="img-fluid"></p>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Mean Price: 5.04 million
+Standard Deviation: 1.24 million
+Median Price: 4.6 million
+Proportion of players that cost less than £6 million: 0.86
+Proportion of players that cost between £6 million and £8 million: 0.1
+Proportion of players that cost more than £8 million: 0.04</code></pre>
+</div>
+</div>
+<p>Even though there are a lot of changes in prices throughout the season, the price distribution has not changed too much. The main change that occurred between the two gameweeks is that the mean price of players decreased from £5.37 million to £5.04 million, and the median price decreased from £5.0 million to £4.6 million. Again, this can be due to the fact that most of the players in the Premier League do not get to play many minutes on a weekly basis, which leads to a low point count. Attaining a low point count would lead to a price decrease, as they had a weaker performance. It is also interesting, however, that the standard deviation only decreased from £1.31 million to £1.24 million. This means that even though there were a lot of overall price decreases between players, there are also a number of players who performed well over the season and had an increase in their prices. This is further backed up by the proportion of players that cost more than £8 million, which has only decreased by 1% between the 2nd and 38th gameweek.</p>
+</section>
+<section id="analysing-position" class="level4">
+<h4 class="anchored" data-anchor-id="analysing-position">Analysing Position</h4>
+<p>Like the price column, the position column is important, because we need to ensure that we satisfy the constraints, namely the position and formation constraints. When forming a team, we need to make sure that we have 2 goalkeepers, 5 defenders, 5 midfielders, and 3 forwards. Let’s see how the players are distributed between these four categories with the barplot below.</p>
+<div class="cell" data-execution_count="72">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame(data(<span class="dv">2</span>)[<span class="st">'position'</span>])</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots()</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'position'</span>].value_counts().sort_index().plot(ax <span class="op">=</span> ax, kind<span class="op">=</span><span class="st">'bar'</span>, title<span class="op">=</span><span class="st">'Position Frequency'</span>, xlabel<span class="op">=</span><span class="st">'Encoded Position'</span>, ylabel<span class="op">=</span><span class="st">'Frequency'</span>)</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Proportion of players who are goalkeepers:"</span>, <span class="bu">round</span>(<span class="bu">len</span>(df[df[<span class="st">'position'</span>] <span class="op">==</span> <span class="dv">1</span>]) <span class="op">/</span> <span class="bu">len</span>(df[<span class="st">'position'</span>]), <span class="dv">2</span>))</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Proportion of players who are defenders:"</span>, <span class="bu">round</span>(<span class="bu">len</span>(df[df[<span class="st">'position'</span>] <span class="op">==</span> <span class="dv">2</span>]) <span class="op">/</span> <span class="bu">len</span>(df[<span class="st">'position'</span>]), <span class="dv">2</span>))</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Proportion of players who are midfielders:"</span>, <span class="bu">round</span>(<span class="bu">len</span>(df[df[<span class="st">'position'</span>] <span class="op">==</span> <span class="dv">3</span>]) <span class="op">/</span> <span class="bu">len</span>(df[<span class="st">'position'</span>]), <span class="dv">2</span>))</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Proportion of players who are forwards:"</span>, <span class="bu">round</span>(<span class="bu">len</span>(df[df[<span class="st">'position'</span>] <span class="op">==</span> <span class="dv">4</span>]) <span class="op">/</span> <span class="bu">len</span>(df[<span class="st">'position'</span>]), <span class="dv">2</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><img src="optimiser_files/figure-html/cell-8-output-1.png" class="img-fluid"></p>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Proportion of players who are goalkeepers: 0.09
+Proportion of players who are defenders: 0.34
+Proportion of players who are midfielders: 0.43
+Proportion of players who are forwards: 0.15</code></pre>
+</div>
+</div>
+<p>As a reminder, we encoded goalkeepers to ‘1’, defenders to ‘2’, midfielders to ‘3’, and forwards to ‘4’. We can see that the two most popular positions from the plot above are defenders and midfielders, as they collectively comprise 77% of all the players in FPL. The reason for the drastic differences between these four groups is that Premier League teams have a number of players in their squad that is roughly proportional to the number of players that feature in their starting XI. For example, a Premier League team must field one goalkeeper every match, and between three and five defenders. So, it makes sense that Premier League teams have almost four times as many defenders as goalkeepers. This is an interesting comparison, but let us see if there is a difference in price between these groups.</p>
+<div class="cell" data-execution_count="73">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>gk_df <span class="op">=</span> data(<span class="dv">38</span>)[data(<span class="dv">38</span>)[<span class="st">'position'</span>] <span class="op">==</span> <span class="dv">1</span>]</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>def_df <span class="op">=</span> data(<span class="dv">38</span>)[data(<span class="dv">38</span>)[<span class="st">'position'</span>] <span class="op">==</span> <span class="dv">2</span>]</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>mid_df <span class="op">=</span> data(<span class="dv">38</span>)[data(<span class="dv">38</span>)[<span class="st">'position'</span>] <span class="op">==</span> <span class="dv">3</span>]</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>fwd_df <span class="op">=</span> data(<span class="dv">38</span>)[data(<span class="dv">38</span>)[<span class="st">'position'</span>] <span class="op">==</span> <span class="dv">4</span>]</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>my_dict <span class="op">=</span> {<span class="st">'Goalkeepers'</span>: gk_df[<span class="st">'price'</span>], <span class="st">'Defenders'</span>: def_df[<span class="st">'price'</span>], <span class="st">'Midfielders'</span>: mid_df[<span class="st">'price'</span>], <span class="st">'Forwards'</span>: fwd_df[<span class="st">'price'</span>]}</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots()</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>ax.boxplot(my_dict.values())</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>ax.set_xticklabels(my_dict.keys())</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">'Price distribution according to Position'</span>)</span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">'Price'</span>)</span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">'Position'</span>)</span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Mean Price of Goalkeepers:"</span>, <span class="bu">round</span>(gk_df[<span class="st">'price'</span>].mean(),<span class="dv">2</span>))</span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Mean Price of Defenders:"</span>, <span class="bu">round</span>(def_df[<span class="st">'price'</span>].mean(),<span class="dv">2</span>))</span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Mean Price of Midfielders:"</span>, <span class="bu">round</span>(mid_df[<span class="st">'price'</span>].mean(),<span class="dv">2</span>))</span>
+<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Mean Price of Forwards:"</span>, <span class="bu">round</span>(fwd_df[<span class="st">'price'</span>].mean(),<span class="dv">2</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><img src="optimiser_files/figure-html/cell-9-output-1.png" class="img-fluid"></p>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Mean Price of Goalkeepers: 4.4
+Mean Price of Defenders: 4.59
+Mean Price of Midfielders: 5.23
+Mean Price of Forwards: 5.9</code></pre>
+</div>
+</div>
+<p>We can also see a substantial difference between the four groups here. Goalkeepers have the lowest median price, followed by defenders, then midfielders, and finally forwards. This order is also true when comparing the variation in the four groups. Although most values of players lie between the £4 million and £6 million range, regardless of position, the difference in price points lies in the extremities. For instance, the most expensive forwards are more than double the price of the most expensive goalkeeper! But does investing in more expensive forwards yield a higher point return than investing in less expensive defenders? Let’s see by plotting the points per million pounds invested distributions of players by positions, who have scored at least one point throughout each of the gameweeks.</p>
+<div class="cell" data-execution_count="74">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> data(<span class="dv">1</span>)</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> k <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2</span>,<span class="dv">39</span>):</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>    df <span class="op">=</span> pd.concat([df, data(k)])</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df[df[<span class="st">'total_points'</span>] <span class="op">&gt;</span> <span class="dv">0</span>]</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>gk_df <span class="op">=</span> df[df[<span class="st">'position'</span>] <span class="op">==</span> <span class="dv">1</span>]</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>def_df <span class="op">=</span> df[df[<span class="st">'position'</span>] <span class="op">==</span> <span class="dv">2</span>]</span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>mid_df <span class="op">=</span> df[df[<span class="st">'position'</span>] <span class="op">==</span> <span class="dv">3</span>]</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>fwd_df <span class="op">=</span> df[df[<span class="st">'position'</span>] <span class="op">==</span> <span class="dv">4</span>]</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>my_dict <span class="op">=</span> {<span class="st">'Goalkeepers'</span>: gk_df[<span class="st">'total_points'</span>] <span class="op">/</span> gk_df[<span class="st">'price'</span>], <span class="st">'Defenders'</span>: def_df[<span class="st">'total_points'</span>] <span class="op">/</span> def_df[<span class="st">'price'</span>], <span class="st">'Midfielders'</span>: mid_df[<span class="st">'total_points'</span>] <span class="op">/</span> mid_df[<span class="st">'price'</span>], <span class="st">'Forwards'</span>: fwd_df[<span class="st">'total_points'</span>] <span class="op">/</span> fwd_df[<span class="st">'price'</span>]}</span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots()</span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>ax.boxplot(my_dict.values())</span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>ax.set_xticklabels(my_dict.keys())</span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">'Points per Million'</span>)</span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">'Position'</span>)</span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">'Points per Million distribution according to Position'</span>)</span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Mean Points per Million of Goalkeepers:"</span>, <span class="bu">round</span>((gk_df[<span class="st">'total_points'</span>] <span class="op">/</span> gk_df[<span class="st">'price'</span>]).mean(),<span class="dv">2</span>))</span>
+<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Mean Points per Million of Defenders:"</span>, <span class="bu">round</span>((def_df[<span class="st">'total_points'</span>] <span class="op">/</span> def_df[<span class="st">'price'</span>]).mean(),<span class="dv">2</span>))</span>
+<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Mean Points per Million of Midfielders:"</span>, <span class="bu">round</span>((mid_df[<span class="st">'total_points'</span>] <span class="op">/</span> mid_df[<span class="st">'price'</span>]).mean(),<span class="dv">2</span>))</span>
+<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Mean Points per Million of Forwards:"</span>, <span class="bu">round</span>((fwd_df[<span class="st">'total_points'</span>] <span class="op">/</span> fwd_df[<span class="st">'price'</span>]).mean(),<span class="dv">2</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><img src="optimiser_files/figure-html/cell-10-output-1.png" class="img-fluid"></p>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Mean Points per Million of Goalkeepers: 0.77
+Mean Points per Million of Defenders: 0.69
+Mean Points per Million of Midfielders: 0.51
+Mean Points per Million of Forwards: 0.45</code></pre>
+</div>
+</div>
+<p>This plot shows a completely different narrative than the previous one. The previous plot showed that forwards, on average, were the most expensive players and should likely produce the highest return of points, this plot shows that when you take into account the number of points that they attain, the forwards, on average, produce the lowest return on investment. We can infer this from the plot above, as the mean and median values are the lowest for forwards, and the most extreme outlier for forwards is at least 0.5 points per million less than any extreme outlier of any of the other positions. This could indicate to us, that if we have an issue with the price constraint, it may be more useful to invest in a defender as opposed to a forward, as they are generally cheaper.</p>
+</section>
+<section id="analysing-team" class="level4">
+<h4 class="anchored" data-anchor-id="analysing-team">Analysing Team</h4>
+<p>The team column is an essential component of this dataset because we need it to satisfy the team constraint. As a reminder, the team constraint is that we cannot have more than three players from any one Premier League team during any gameweek. Because of this, we do not need to know which Premier League team any player is specifically on, but rather that they do not have more than two other players from the same Premier League team in our Fantasy team. Let’s take a look at the number of players on each team. Since there are twenty teams in the Premier League, the values are encoded from 1 to 20.</p>
+<div class="cell" data-execution_count="75">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame(data(<span class="dv">38</span>)[<span class="st">'team'</span>])</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots()</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'team'</span>].value_counts().sort_index().plot(ax <span class="op">=</span> ax, kind<span class="op">=</span><span class="st">'bar'</span>, title<span class="op">=</span><span class="st">'Number of Players on each team'</span>, xlabel <span class="op">=</span> <span class="st">'Encoded Team'</span>, ylabel<span class="op">=</span><span class="st">'Frequency'</span>)</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Median number of players on a team:"</span>, df[<span class="st">'team'</span>].value_counts().median())</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Mean number of players on a team:"</span>, df[<span class="st">'team'</span>].value_counts().mean())</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Minimum number of players on a team:"</span>, df[<span class="st">'team'</span>].value_counts().<span class="bu">min</span>())</span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Maximum number of players on a team:"</span>, df[<span class="st">'team'</span>].value_counts().<span class="bu">max</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><img src="optimiser_files/figure-html/cell-11-output-1.png" class="img-fluid"></p>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Median number of players on a team: 33.0
+Mean number of players on a team: 34.15
+Minimum number of players on a team: 30
+Maximum number of players on a team: 42</code></pre>
+</div>
+</div>
+<p>There does not seem to be any drastic differences between any of the teams in the Premier League. In fact, the number of players on each Premier League team lies between 30 and 42 players. The mean value is slightly larger than the median value, indicating that the data is slightly skewed to the right. Let’s see if the team has any indication of how many points the players earn in total over a season.</p>
+<div class="cell" data-execution_count="76">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> data(<span class="dv">1</span>)</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> k <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2</span>,<span class="dv">39</span>):</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>    df <span class="op">=</span> pd.concat([df, data(k)])</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots()</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>points <span class="op">=</span> []</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> k <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>,<span class="dv">21</span>):</span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>    points.append(df.loc[df[<span class="st">'team'</span>] <span class="op">==</span> k, <span class="st">'total_points'</span>].<span class="bu">sum</span>())</span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>points <span class="op">=</span> pd.DataFrame(points, columns<span class="op">=</span>[<span class="st">"Total Points"</span>])</span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>points.index <span class="op">=</span> points.index <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a>points.plot(kind<span class="op">=</span><span class="st">'bar'</span>, title<span class="op">=</span><span class="st">'Total Points'</span>, ax<span class="op">=</span>ax, color<span class="op">=</span><span class="st">'blue'</span>)</span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Encoded Team"</span>)</span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Total Points"</span>)</span>
+<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Total Season Points per Team"</span>)</span>
+<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><img src="optimiser_files/figure-html/cell-12-output-1.png" class="img-fluid"></p>
+</div>
+</div>
+<p>There seems to be a large variation between all of the teams. Team ‘4’, which is Chelsea, attained the highest number of Fantasy player points throughout the season. In fact, they attained more than double the number of points than Team ‘7’ and Team ‘15’, which are Hull City and Sunderland. This plot is a good indicator of how well a Premier League team does in the season, as Chelsea actually ended up winning the Premier League in the 2016-2017 season, and both Hull City and Sunderland were relegated to the Championship. In addition to Chelsea, we will likely see a lot of players from Teams ‘1’, ‘9’, ‘10’, and ‘17’ in our calculation of an optimal team later in this project, as they have the highest overall returns. For reference, these teams are Arsenal, Liverpool, Machester City, and Tottenham, who placed 5th, 4th, 3rd, and 2nd respectively in the Premier League in the 2016-2017 season.</p>
+<p>Now that we have had a comprehensive look at all of the variables in the dataset, let us take a look at the methods that we will be implementing to solve this optimisation problem.</p>
+</section>
+</section>
+<section id="methods" class="level2">
+<h2 class="anchored" data-anchor-id="methods">Methods</h2>
+<p>For this project, we will be using three classes. The team of the year (<a href="https://github.com/ashabib1/fpl/blob/main/toty.py">toty</a>) class helps us find the players that cumulatively score the highest number of points in a range of gameweeks. The team of the week (<a href="https://github.com/ashabib1/fpl/blob/main/totw.py">totw</a>) class helps us find the players that score the highest number of points in a given gameweek. The <a href="https://github.com/ashabib1/fpl/blob/main/evaluate.py">evaulate</a> class helps us evaluate the number of points achieved in a season, given a list of players for every gameweek. Here is a list of the classes:</p>
+<div class="cell" data-execution_count="77">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> toty <span class="im">import</span> toty</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> totw <span class="im">import</span> totw</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> evaluate <span class="im">import</span> evaluate</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="team-of-the-year-class" class="level4">
+<h4 class="anchored" data-anchor-id="team-of-the-year-class">Team of the Year Class</h4>
+<p>Let’s start by analysing the process in which each of these classes works, starting with the team of the year (toty) class. As mentioned above, the team of the year class helps us find the players that cumulatively scored the highest number of points in a given gameweek. The only arguments that are required for this class are a range of gameweeks where we would like to find the best possible team. The gameweeks range from 1 to 38, so any range works as long as the initial gameweek is less than the final gameweek. Below is an implementation of this example.</p>
+<div class="cell" data-execution_count="78">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>seven_to_twentyone <span class="op">=</span> toty(<span class="dv">7</span>,<span class="dv">21</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Our 38 datasets in this project are split by gameweek, and each dataset has the individual number of points attained by each player in the respective gameweek. The first step in finding the team of the year is iterating through each dataset in the range of gameweeks given, and aggregating the total number of points for each player. This results in the extraction of two lists: one list with the unique IDs of the highest scoring players in descending total points order, and the second list with the number of points they achieved in total. Below yields an extraction of these two lists from the prior team of the year example.</p>
+<div class="cell" data-execution_count="79">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Unique IDs of the highest performing players:"</span>)</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">""</span>)</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(seven_to_twentyone.top_performers(<span class="dv">100</span>))</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">""</span>)</span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>seven_to_twentyone.points.sort(reverse<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Number of points scored by the highest performing players:"</span>)</span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">""</span>)</span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(seven_to_twentyone.points[<span class="dv">0</span>:<span class="dv">100</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Unique IDs of the highest performing players:
+
+[12, 561, 394, 398, 82, 272, 78, 97, 77, 446, 212, 355, 143, 403, 90, 73, 368, 209, 33, 111, 570, 453, 14, 205, 155, 383, 464, 503, 384, 574, 25, 54, 202, 3, 380, 461, 193, 274, 562, 303, 125, 126, 208, 42, 92, 191, 242, 13, 2, 86, 278, 449, 213, 321, 478, 32, 134, 87, 359, 407, 36, 201, 217, 318, 411, 438, 462, 21, 230, 239, 385, 409, 67, 235, 541, 204, 294, 402, 425, 500, 536, 11, 49, 56, 133, 176, 228, 6, 114, 304, 328, 344, 436, 262, 286, 491, 567, 10, 340, 369]
+
+Number of points scored by the highest performing players:
+
+[108, 103, 101, 101, 96, 94, 90, 89, 86, 85, 84, 83, 81, 81, 79, 78, 74, 72, 71, 71, 71, 70, 67, 67, 66, 66, 64, 64, 63, 63, 62, 62, 61, 60, 60, 60, 59, 59, 59, 58, 57, 57, 57, 55, 55, 55, 55, 54, 53, 53, 53, 53, 52, 52, 52, 51, 51, 50, 50, 50, 49, 49, 49, 49, 49, 49, 49, 48, 48, 48, 48, 48, 47, 47, 47, 46, 46, 46, 46, 46, 46, 45, 45, 45, 45, 45, 45, 44, 44, 44, 44, 44, 44, 43, 43, 43, 43, 42, 42, 42]</code></pre>
+</div>
+</div>
+<p>The first list above contains the unique IDs of the highest-scoring players, and the second list contains the number of points they scored over the range of gameweeks that we defined earlier. We can interpret the first values from each list as follows: the player with unique ID 12, Alexis Sanchez, scored a total of 108 points between gameweek 7 and gameweek 21.</p>
+<p>Now that we have attained a list of the 100 highest-performing players, we can pick the eleven highest-scoring players, and this would be the best team over the given range of gameweeks. In order to address the formation constraint, we can sort each of these players into four lists, one for each position (goalkeepers, defenders, midfielders, and forwards). In this case, we will have the highest-scoring players of each position in a different dataframe.</p>
+<p>Next, we would want to pick eleven players (our starting XI) with the highest points tally from each dataframe that satisfies the formation constraint, which states that the team must have exactly one goalkeeper, at least three defenders, at least two midfielders, and at least one forward. To satisfy this constraint, we can take the highest-scoring goalkeeper, the three highest-scoring defenders, the two highest-scoring midfielders, and the highest-scoring forward and add them to our team of the year. Now, we have four players left to finish our team of the year. Since these last four players can be of any position except goalkeeper, we can just find the highest-scoring players that have not already been chosen, regardless of position. Adding these four players to our team yields the highest-scoring possible team. Let’s look at the results from our example below.</p>
+<div class="cell" data-execution_count="80">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Team of the Year between Gameweek 7 and Gameweek 21:"</span>)</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">""</span>)</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>display(pd.DataFrame(seven_to_twentyone.find_toty(), columns<span class="op">=</span>[<span class="st">"Name"</span>, <span class="st">"Total Points"</span>, <span class="st">"Price"</span>, <span class="st">"Position"</span>, <span class="st">"Team"</span>, <span class="st">"Unique ID"</span>]))</span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Total Points:"</span>, <span class="bu">sum</span>(seven_to_twentyone.find_points()))</span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Total Price:"</span>, <span class="bu">sum</span>(seven_to_twentyone.find_prices()) <span class="op">/</span> <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Team of the Year between Gameweek 7 and Gameweek 21:
+</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Name</th>
+      <th>Total Points</th>
+      <th>Price</th>
+      <th>Position</th>
+      <th>Team</th>
+      <th>Unique ID</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Thibaut_Courtois</td>
+      <td>78</td>
+      <td>55</td>
+      <td>1</td>
+      <td>4</td>
+      <td>73</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Marcos_Alonso</td>
+      <td>103</td>
+      <td>59</td>
+      <td>2</td>
+      <td>4</td>
+      <td>561</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Gary_Cahill</td>
+      <td>90</td>
+      <td>59</td>
+      <td>2</td>
+      <td>4</td>
+      <td>78</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>César_Azpilicueta</td>
+      <td>86</td>
+      <td>60</td>
+      <td>2</td>
+      <td>4</td>
+      <td>77</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Alexis_Sánchez</td>
+      <td>108</td>
+      <td>112</td>
+      <td>3</td>
+      <td>1</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Christian_Eriksen</td>
+      <td>101</td>
+      <td>83</td>
+      <td>3</td>
+      <td>17</td>
+      <td>394</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Bamidele_Alli</td>
+      <td>101</td>
+      <td>83</td>
+      <td>3</td>
+      <td>17</td>
+      <td>398</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Eden_Hazard</td>
+      <td>96</td>
+      <td>99</td>
+      <td>3</td>
+      <td>4</td>
+      <td>82</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Matt_Phillips</td>
+      <td>85</td>
+      <td>53</td>
+      <td>3</td>
+      <td>19</td>
+      <td>446</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>Zlatan_Ibrahimovic</td>
+      <td>94</td>
+      <td>115</td>
+      <td>4</td>
+      <td>11</td>
+      <td>272</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>Diego_Da Silva Costa</td>
+      <td>89</td>
+      <td>100</td>
+      <td>4</td>
+      <td>4</td>
+      <td>97</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Total Points: 1031
+Total Price: 87.8</code></pre>
+</div>
+</div>
+<p>Although it does seem that we have gotten a set of the highest-scoring players over these gameweeks, we can see that a lot of the constraints have not been satisfied yet. The position constraint has not been satisfied because we are still missing the four substitute players, who would help to get to the 15-player requirement for a team. Furthermore, we need these four players to satisfy the price constraint. Currently, the price of these players adds up to a value of less than £100 million, but this may change after we add the substitutes. For this set of players, even the team constraint of having no more than three players from one Premier League team is not satisfied. Thibaut Courtois, Marcos Alonso, Gary Cahill, Cesar Azpilicueta, Eden Hazard, and Diego Da Silva Costa all play for the same team: Chelsea. In fact, the only team-building constraint that is satisfied is the formation constraint, which we took into account when building this initial team. Let’s now work on finding an optimal team that satisfies these constraints.</p>
+<p>In order to tackle the team constraint, which states that there cannot be more than three players on one team, we can choose a different method for constructing the position-dependent dataframes from the two lists that were outputted above. Iterating from the players that have produced the most points to the least points, if there are already cumulatively three players from the same team, then we do not add this player to the position-dependent dataframes. This ensures that any combination of players has a maximum of three players from the same team. In the example above, Marcos Alonso, Eden Hazard, and Gary Cahill are the three highest-scoring Chelsea players. If we use this updated methodology, these three players will be a part of the team and the rest of the Chelsea players will be ineligible to make it into the team.</p>
+<p>The most difficult constraint to adhere to is definitely the price constraint, as we are dedicated only a limited budget to invest in the team. Going back to the analysis of the points per million pounds, we saw that forwards generally had the lowest return on interest (ROI) from the four positions, so we can use the concept of lowest ROI to try and fit this constraint in. We can take out the player on the current team of the year that has the lowest ROI (generally the forward), and add the player that has the highest ROI from the best performers that have not been picked for the team. This usually works out, as we would likely get a cheaper player with a high ROI. If the price constraint still is not satisfied, then we do this process again, by removing the player with the second lowest ROI (now the lowest ROI) from our team of the year, and picking the next best player on the best performers list with the highest ROI, that still takes into account all of the other constraints. We repeat this process until the team satisfies the price constraint.</p>
+<p>The position constraint is the final constraint we are attempting to tackle. In fact, this constraint is satisfied hand-in-hand with the price constraint. The position constraint can be thought of as finding four substitutes that satisfy the team. Depending on the other players, the position constraint may need one goalkeeper and three midfielders, or one goalkeeper, one defender, one midfielder, and one forward. If we cannot find four substitutes to fit into a team, both the price and position constraints fail. Whenever we swap out a player, the position constraint generates the cheapest substitutes that satisfy the team and formation constraints, and if this high ROI player swap does not satisfy the price constraint, both the position and price constraints fail. The price constraint iterates through the highest ROI players and simultaneously checks on the position constraint.</p>
+<p>Now that we have found a comprehensive method to tackle all four of the team-building constraints, let us look at the final constraint-abiding team for our range of gameweeks. We use the argument <strong>constraints=True</strong> when calling the class to indicate that we take into account these constraints.</p>
+<div class="cell" data-execution_count="81">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Team of the Year between Gameweek 7 and Gameweek 21, taking into account constraints:"</span>)</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>seven_to_twentyone_constrained <span class="op">=</span> toty(<span class="dv">7</span>,<span class="dv">21</span>,constraints<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>display(pd.DataFrame(seven_to_twentyone_constrained.find_toty(), columns<span class="op">=</span>[<span class="st">"Name"</span>, <span class="st">"Total Points"</span>, <span class="st">"Price"</span>, <span class="st">"Position"</span>, <span class="st">"Team"</span>, <span class="st">"Unique ID"</span>]))</span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Substiutes:"</span>)</span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>display(pd.DataFrame(seven_to_twentyone_constrained.return_subs(), columns<span class="op">=</span>[<span class="st">"Name"</span>, <span class="st">"Total Points"</span>, <span class="st">"Price"</span>, <span class="st">"Position"</span>, <span class="st">"Team"</span>, <span class="st">"Unique ID"</span>]))</span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Total Points:"</span>, <span class="bu">sum</span>(seven_to_twentyone_constrained.find_points()))</span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Total Price:"</span>, (<span class="bu">sum</span>(seven_to_twentyone_constrained.find_prices()) <span class="op">+</span> <span class="bu">sum</span>(seven_to_twentyone_constrained.return_subs_prices())) <span class="op">/</span> <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Team of the Year between Gameweek 7 and Gameweek 21, taking into account constraints:</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Name</th>
+      <th>Total Points</th>
+      <th>Price</th>
+      <th>Position</th>
+      <th>Team</th>
+      <th>Unique ID</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Lee_Grant</td>
+      <td>63</td>
+      <td>40</td>
+      <td>1</td>
+      <td>14</td>
+      <td>574</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Marcos_Alonso</td>
+      <td>103</td>
+      <td>59</td>
+      <td>2</td>
+      <td>4</td>
+      <td>561</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Gary_Cahill</td>
+      <td>90</td>
+      <td>59</td>
+      <td>2</td>
+      <td>4</td>
+      <td>78</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Charlie_Daniels</td>
+      <td>71</td>
+      <td>49</td>
+      <td>2</td>
+      <td>2</td>
+      <td>33</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Alexis_Sánchez</td>
+      <td>108</td>
+      <td>112</td>
+      <td>3</td>
+      <td>1</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Christian_Eriksen</td>
+      <td>101</td>
+      <td>83</td>
+      <td>3</td>
+      <td>17</td>
+      <td>394</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Bamidele_Alli</td>
+      <td>101</td>
+      <td>83</td>
+      <td>3</td>
+      <td>17</td>
+      <td>398</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Eden_Hazard</td>
+      <td>96</td>
+      <td>99</td>
+      <td>3</td>
+      <td>4</td>
+      <td>82</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Matt_Phillips</td>
+      <td>85</td>
+      <td>53</td>
+      <td>3</td>
+      <td>19</td>
+      <td>446</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>Zlatan_Ibrahimovic</td>
+      <td>94</td>
+      <td>115</td>
+      <td>4</td>
+      <td>11</td>
+      <td>272</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>Jermain_Defoe</td>
+      <td>83</td>
+      <td>72</td>
+      <td>4</td>
+      <td>15</td>
+      <td>355</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Substiutes:</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Name</th>
+      <th>Total Points</th>
+      <th>Price</th>
+      <th>Position</th>
+      <th>Team</th>
+      <th>Unique ID</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Nick_Pope</td>
+      <td>0</td>
+      <td>40</td>
+      <td>1</td>
+      <td>3</td>
+      <td>471</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Brian_Lenihan</td>
+      <td>0</td>
+      <td>39</td>
+      <td>2</td>
+      <td>7</td>
+      <td>148</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Tyias_Browning</td>
+      <td>0</td>
+      <td>39</td>
+      <td>2</td>
+      <td>6</td>
+      <td>130</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Marvin_Emnes</td>
+      <td>0</td>
+      <td>44</td>
+      <td>4</td>
+      <td>16</td>
+      <td>378</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Total Points: 995
+Total Price: 98.6</code></pre>
+</div>
+</div>
+<p>There has been a decrease of 36 points between the unconstrained team and the constrained team, but let us double-check that all of the team-building constraints have been satisfied:</p>
+<ol type="1">
+<li><p>Position Constraint: The team does have 15 players, consisting of exactly 2 goalkeepers, 5 defenders, 5 midfielders, and 3 forwards, so this constraint is satisfied.</p></li>
+<li><p>Price Constraint: The combined price of the 15 players at the beginning of gameweek seven is £98.6 million, which is less than £100 million, hence satisfying the price constraint.</p></li>
+<li><p>Formation Constraint: The starting XI consists of 1 goalkeeper, 3 defenders, 5 midfielders, and 2 forwards, and the substitutes contain 1 goalkeeper, 2 defenders, and 1 forward, so the formation constraint is satisfied.</p></li>
+<li><p>Team Constraint: Each Premier League team is featured a maximum of three times in this Fantasy team, so the team constraint is satisfied.</p></li>
+</ol>
+<p>Great! We have found an optimal team that satisfies all the team-building constraints from gameweek 7 to gameweek 21. Even the team-evaluating constraint, which is the transfer constraint, is satisfied, as we have not made any transfers over these gameweeks. We shall discuss this in more detail when we get to the team of the week and evaluate classes. Let’s see if the same constraints are satisfied when we take into account all 38 gameweeks.</p>
+<div class="cell" data-execution_count="82">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Team of the Year between Gameweek 1 and Gameweek 38, taking into account constraints:"</span>)</span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>full_toty_constrained <span class="op">=</span> toty(<span class="dv">1</span>,<span class="dv">38</span>,constraints<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>display(pd.DataFrame(full_toty_constrained.find_toty(), columns<span class="op">=</span>[<span class="st">"Name"</span>, <span class="st">"Total Points"</span>, <span class="st">"Price"</span>, <span class="st">"Position"</span>, <span class="st">"Team"</span>, <span class="st">"Unique ID"</span>]))</span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Substiutes:"</span>)</span>
+<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a>display(pd.DataFrame(full_toty_constrained.return_subs(), columns<span class="op">=</span>[<span class="st">"Name"</span>, <span class="st">"Total Points"</span>, <span class="st">"Price"</span>, <span class="st">"Position"</span>, <span class="st">"Team"</span>, <span class="st">"Unique ID"</span>]))</span>
+<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Total Points:"</span>, <span class="bu">sum</span>(full_toty_constrained.find_points()))</span>
+<span id="cb30-7"><a href="#cb30-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Total Price:"</span>, (<span class="bu">sum</span>(full_toty_constrained.find_prices()) <span class="op">+</span> <span class="bu">sum</span>(full_toty_constrained.return_subs_prices())) <span class="op">/</span> <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Team of the Year between Gameweek 1 and Gameweek 38, taking into account constraints:</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Name</th>
+      <th>Total Points</th>
+      <th>Price</th>
+      <th>Position</th>
+      <th>Team</th>
+      <th>Unique ID</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Tom_Heaton</td>
+      <td>149</td>
+      <td>45</td>
+      <td>1</td>
+      <td>3</td>
+      <td>54</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Gary_Cahill</td>
+      <td>178</td>
+      <td>60</td>
+      <td>2</td>
+      <td>4</td>
+      <td>78</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Leighton_Baines</td>
+      <td>135</td>
+      <td>55</td>
+      <td>2</td>
+      <td>6</td>
+      <td>125</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Charlie_Daniels</td>
+      <td>134</td>
+      <td>50</td>
+      <td>2</td>
+      <td>2</td>
+      <td>33</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Alexis_Sánchez</td>
+      <td>264</td>
+      <td>110</td>
+      <td>3</td>
+      <td>1</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Bamidele_Alli</td>
+      <td>225</td>
+      <td>85</td>
+      <td>3</td>
+      <td>17</td>
+      <td>398</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Eden_Hazard</td>
+      <td>224</td>
+      <td>100</td>
+      <td>3</td>
+      <td>4</td>
+      <td>82</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Christian_Eriksen</td>
+      <td>218</td>
+      <td>85</td>
+      <td>3</td>
+      <td>17</td>
+      <td>394</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Etienne_Capoue</td>
+      <td>131</td>
+      <td>45</td>
+      <td>3</td>
+      <td>18</td>
+      <td>416</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>Harry_Kane</td>
+      <td>224</td>
+      <td>110</td>
+      <td>4</td>
+      <td>17</td>
+      <td>403</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>Romelu_Lukaku</td>
+      <td>221</td>
+      <td>90</td>
+      <td>4</td>
+      <td>6</td>
+      <td>143</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Substiutes:</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Name</th>
+      <th>Total Points</th>
+      <th>Price</th>
+      <th>Position</th>
+      <th>Team</th>
+      <th>Unique ID</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Jordan_Pickford</td>
+      <td>102</td>
+      <td>40</td>
+      <td>1</td>
+      <td>15</td>
+      <td>340</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Jack_Stephens</td>
+      <td>60</td>
+      <td>40</td>
+      <td>2</td>
+      <td>13</td>
+      <td>504</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Stephen_Kingsley</td>
+      <td>29</td>
+      <td>40</td>
+      <td>2</td>
+      <td>16</td>
+      <td>365</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Ashley_Barnes</td>
+      <td>81</td>
+      <td>45</td>
+      <td>4</td>
+      <td>3</td>
+      <td>70</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Total Points: 2103
+Total Price: 100.0</code></pre>
+</div>
+</div>
+<p>The optimal team of the year where we make zero transfers leads to 2103 points. If we double-check, we can see that all of the team-building constraints have been satisfied. We were also able to utilise exactly £100 million to satisfy the price constraint which shows that this optimisation method can maximise well over the range of gameweeks. Furthermore, keep in mind that this points total of 2103 is not a final total, because we have not taken into account any of the extra rules for extra points, which are captaincy, wildcards, and each of the three chips. We would not be deducted any points either from the transfer constraint, as we have made zero transfers over the course of the 38 gameweeks. Hence, it is very likely that the final total will increase. This a great start for optimising the Fantasy Team over a range of gameweeks, but what about optimising the Fantasy Team over a single gameweek? Let’s now take a look at the team of the week (totw) class.</p>
+</section>
+<section id="team-of-the-week-class" class="level4">
+<h4 class="anchored" data-anchor-id="team-of-the-week-class">Team of the Week Class</h4>
+<p>The team of the week class is technically a special case of the team of the year class, where the range of gameweeks is just one gameweek, so most of the methods are very similar, if not the same as the team of the year class. The major difference between the two classes is that the team of the week class does not aggregate the total points over a range of gameweeks, making the process of finding the best team for a single week less computationally complex than the team of the year class. In fact, all the processes that we described above for the team of the year are the same for the team of the week class. The team of the week class has some extra methods that we will describe later in this project. Let’s take a look at the unconstrained team of the week for Gameweek 32 below.</p>
+<div class="cell" data-execution_count="83">
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Gameweek 32 Team of the Week:"</span>)</span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">""</span>)</span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>gw32 <span class="op">=</span> totw(<span class="dv">32</span>)</span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>display(pd.DataFrame(gw32.find_totw(), columns<span class="op">=</span>[<span class="st">"Name"</span>, <span class="st">"Total Points"</span>, <span class="st">"Price"</span>, <span class="st">"Position"</span>, <span class="st">"Team"</span>, <span class="st">"Unique ID"</span>]))</span>
+<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Total Points:"</span>, <span class="bu">sum</span>(gw32.find_points()))</span>
+<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Total Price:"</span>, <span class="bu">sum</span>(gw32.find_prices()) <span class="op">/</span> <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Gameweek 32 Team of the Week:
+</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Name</th>
+      <th>Total Points</th>
+      <th>Price</th>
+      <th>Position</th>
+      <th>Team</th>
+      <th>Unique ID</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Fraser_Forster</td>
+      <td>7</td>
+      <td>50</td>
+      <td>1</td>
+      <td>13</td>
+      <td>294</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Phil_Jagielka</td>
+      <td>12</td>
+      <td>46</td>
+      <td>2</td>
+      <td>6</td>
+      <td>127</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Kieran_Trippier</td>
+      <td>11</td>
+      <td>47</td>
+      <td>2</td>
+      <td>17</td>
+      <td>387</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Luke_Shaw</td>
+      <td>10</td>
+      <td>52</td>
+      <td>2</td>
+      <td>11</td>
+      <td>247</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Heung-Min_Son</td>
+      <td>19</td>
+      <td>70</td>
+      <td>3</td>
+      <td>17</td>
+      <td>402</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Andros_Townsend</td>
+      <td>14</td>
+      <td>58</td>
+      <td>3</td>
+      <td>5</td>
+      <td>120</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Wilfried_Zaha</td>
+      <td>11</td>
+      <td>58</td>
+      <td>3</td>
+      <td>5</td>
+      <td>111</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Jordy_Clasie</td>
+      <td>11</td>
+      <td>46</td>
+      <td>3</td>
+      <td>13</td>
+      <td>309</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Eden_Hazard</td>
+      <td>10</td>
+      <td>103</td>
+      <td>3</td>
+      <td>4</td>
+      <td>82</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>Romelu_Lukaku</td>
+      <td>13</td>
+      <td>104</td>
+      <td>4</td>
+      <td>6</td>
+      <td>143</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>Zlatan_Ibrahimovic</td>
+      <td>12</td>
+      <td>114</td>
+      <td>4</td>
+      <td>11</td>
+      <td>272</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Total Points: 130
+Total Price: 74.8</code></pre>
+</div>
+</div>
+<p>Again, this list does not take into account most of the team-building constraints. The position constraint is not satisfied yet, because we still need to find the four substitute players. The price constraint looks like it will be satisfied, as the total price of these eleven players is relatively low, but we still need to find substitutes to prove this hypothesis. The formation constraint is satisfied, as the formation above is a 3-5-2, which is valid. In fact, the team constraint is satisfied so far, as there are no more than three teams from one club, but we also need to check if the substitutes can accommodate for this. Let’s now take all of these constraints into account, and find an optimal team for Gameweek 32.</p>
+<div class="cell" data-execution_count="84">
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Gameweek 32 Team of the Week, taking into account constraints:"</span>)</span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">""</span>)</span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>gw32_constrained <span class="op">=</span> totw(<span class="dv">32</span>,constraints<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a>display(pd.DataFrame(gw32_constrained.find_totw(), columns<span class="op">=</span>[<span class="st">"Name"</span>, <span class="st">"Total Points"</span>, <span class="st">"Price"</span>, <span class="st">"Position"</span>, <span class="st">"Team"</span>, <span class="st">"Unique ID"</span>]))</span>
+<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Substiutes:"</span>)</span>
+<span id="cb37-6"><a href="#cb37-6" aria-hidden="true" tabindex="-1"></a>display(pd.DataFrame(gw32_constrained.return_subs(), columns<span class="op">=</span>[<span class="st">"Name"</span>, <span class="st">"Total Points"</span>, <span class="st">"Price"</span>, <span class="st">"Position"</span>, <span class="st">"Team"</span>, <span class="st">"Unique ID"</span>]))</span>
+<span id="cb37-7"><a href="#cb37-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Total Points:"</span>, <span class="bu">sum</span>(gw32_constrained.find_points()))</span>
+<span id="cb37-8"><a href="#cb37-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Total Price:"</span>, (<span class="bu">sum</span>(gw32_constrained.find_prices()) <span class="op">+</span> <span class="bu">sum</span>(gw32_constrained.return_subs_prices()))<span class="op">/</span> <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Gameweek 32 Team of the Week, taking into account constraints:
+</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Name</th>
+      <th>Total Points</th>
+      <th>Price</th>
+      <th>Position</th>
+      <th>Team</th>
+      <th>Unique ID</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Fraser_Forster</td>
+      <td>7</td>
+      <td>50</td>
+      <td>1</td>
+      <td>13</td>
+      <td>294</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Phil_Jagielka</td>
+      <td>12</td>
+      <td>46</td>
+      <td>2</td>
+      <td>6</td>
+      <td>127</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Kieran_Trippier</td>
+      <td>11</td>
+      <td>47</td>
+      <td>2</td>
+      <td>17</td>
+      <td>387</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Luke_Shaw</td>
+      <td>10</td>
+      <td>52</td>
+      <td>2</td>
+      <td>11</td>
+      <td>247</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Heung-Min_Son</td>
+      <td>19</td>
+      <td>70</td>
+      <td>3</td>
+      <td>17</td>
+      <td>402</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Andros_Townsend</td>
+      <td>14</td>
+      <td>58</td>
+      <td>3</td>
+      <td>5</td>
+      <td>120</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Wilfried_Zaha</td>
+      <td>11</td>
+      <td>58</td>
+      <td>3</td>
+      <td>5</td>
+      <td>111</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Jordy_Clasie</td>
+      <td>11</td>
+      <td>46</td>
+      <td>3</td>
+      <td>13</td>
+      <td>309</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Eden_Hazard</td>
+      <td>10</td>
+      <td>103</td>
+      <td>3</td>
+      <td>4</td>
+      <td>82</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>Romelu_Lukaku</td>
+      <td>13</td>
+      <td>104</td>
+      <td>4</td>
+      <td>6</td>
+      <td>143</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>Zlatan_Ibrahimovic</td>
+      <td>12</td>
+      <td>114</td>
+      <td>4</td>
+      <td>11</td>
+      <td>272</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Substiutes:</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Name</th>
+      <th>Total Points</th>
+      <th>Price</th>
+      <th>Position</th>
+      <th>Team</th>
+      <th>Unique ID</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Nick_Pope</td>
+      <td>0</td>
+      <td>39</td>
+      <td>1</td>
+      <td>3</td>
+      <td>471</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Nathan_Aké</td>
+      <td>0</td>
+      <td>38</td>
+      <td>2</td>
+      <td>4</td>
+      <td>36</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Connor_Randall</td>
+      <td>0</td>
+      <td>39</td>
+      <td>2</td>
+      <td>9</td>
+      <td>196</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Lewis_Grabban</td>
+      <td>0</td>
+      <td>43</td>
+      <td>4</td>
+      <td>2</td>
+      <td>51</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Total Points: 130
+Total Price: 90.7</code></pre>
+</div>
+</div>
+<p>This is a very interesting result. After adding all four of the substitutes, we did not have to change any of the players in the starting XI, because all of the constraints have been satisfied. The four substitutes were very cheap, of the correct positions, and of the correct teams, satisfying the price, position, and team constraints respectively.</p>
+<p>The goal of this project is to find the optimal combination of players over the 38 gameweeeks, not just one gameweek, so how can we implement this team of the week class to help solve this question? One way in which we can achieve this goal is by summing up all 38 teams of the week to find an overall points total. This is different than the team of the year which we calculated earlier because we are changing the team every single gameweek. This next code snippet will output only the cumulative total points. Although we can iteratively show every team of the week, it would not help us, as we already know that all of the constraints are satisfied.</p>
+<div class="cell" data-execution_count="85">
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>point_sum <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> k <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>,<span class="dv">39</span>):</span>
+<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a>    this_totw <span class="op">=</span> totw(k,constraints<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a>    point_sum <span class="op">+=</span> <span class="bu">sum</span>(this_totw.find_points())</span>
+<span id="cb41-5"><a href="#cb41-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"The sum of points for every gameweek is:"</span>, point_sum)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>The sum of points for every gameweek is: 5116</code></pre>
+</div>
+</div>
+<p>Now that is a lot of points! By finding the team of the week every single week, we can achieve a total of 5116 points. This value takes into account all of the team-building constraints, and its value will likely increase further due to all of the extra rules, including captaincy and wildcards. However, there is an important point to consider with this method. Since we are finding the best team every week, we are effectively ‘transferring’ a lot of players every gameweek. This is where the transfer constraint comes into play because we will be deducted many points every week for all the transfers that we make. We will implement and explain the functionality behind this constraint in the evaluate class.</p>
+<p>In an attempt to decrease the number of transfers that we make each gameweek, we can find a new transfer-dependent team of the week that takes into account the previous team of the week. Our normal method is sorting the dataframe of all players in one gameweek from the players with the highest point-scoring player to the lowest point-scoring player. We can tweak this by creating a new column called effective points. Effective points will be a copy of the points column, but it adds four points to every player that was in the previous team of the week. This way, when finding a team of the week, the dataframe will be more inclined to choose a player that has already been present in the previous team of the week. So, we sort the dataframe of all players in one gameweek from the players by the highest scoring <em>effective</em> points. However, when calculating the total points for the respective week, we will use the points column and not the effective points column. The next snippet of code implements this exactly for the 38 gameweeks, and let’s see how the points total changes.</p>
+<div class="cell" data-execution_count="86">
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>point_sum <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>this_totw <span class="op">=</span> totw(<span class="dv">1</span>,constraints<span class="op">=</span><span class="va">True</span>,transfer_dependent<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> k <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2</span>,<span class="dv">39</span>):</span>
+<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a>    this_totw <span class="op">=</span> totw(k,constraints<span class="op">=</span><span class="va">True</span>,transfer_dependent<span class="op">=</span><span class="va">True</span>,prev_totw<span class="op">=</span>this_totw.find_elements(),prev_subs<span class="op">=</span>this_totw.find_subs())</span>
+<span id="cb43-5"><a href="#cb43-5" aria-hidden="true" tabindex="-1"></a>    point_sum <span class="op">+=</span> <span class="bu">sum</span>(this_totw.find_points())</span>
+<span id="cb43-6"><a href="#cb43-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"The sum of points for every gameweek is:"</span>, point_sum)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>The sum of points for every gameweek is: 4930</code></pre>
+</div>
+</div>
+<p>This method decreases the total number of points by 186. However, this result may or may not end up totalling more points after we evaluate it using the bonus points and adhering to the transfer constraint. This will be done when we analyse the evaluate class.</p>
+</section>
+<section id="evaluate-class" class="level4">
+<h4 class="anchored" data-anchor-id="evaluate-class">Evaluate Class</h4>
+<p>The evaluate class is very useful because we can output the total number of points from a team taking into account the transfer constraint and all of the extra rules, including captaincy, wildcards, and chips. The arguments for the evaluate class are the unique IDs of the players that we are trying to evaluate for every gameweek. The first argument will be 38 lists consisting of 11 unique IDs each for the starting XI, and the second argument will be 38 lists consisting of 4 unique IDs each for the substitutes, totalling 570 unique IDs. Obviously, there can be repeated players across the 38 lists, but none can be repeated within the same list. Once we call the class, we start with a point total equal to zero. Let’s see how we calculate the total number of points achieved by the inputted team. Once we call the class, for each of the 570 unique IDs, we find the number of points that they have achieved in the gameweek in which they are picked, leading to a list of 38 gameweeks, each with a number of points. Let’s call this the points list.</p>
+<p>The first way in which we add to the points sum is the triple captain chip. As a reminder, the triple captain chip triples the value of one player once a season. We iterate through the points list and find the one player that has achieved the highest number of points in a single gameweek, and we add this number to the total points. Note that we do not add triple the points to the total, because we will add double the points for captaincy later.</p>
+<p>The next chip that we address is the bench boost chip. For every gameweek, we calculate the total number of points that the substitutes get, then add the number of points the gameweek with the highest points total achieved to the total points.</p>
+<p>The free hit chip is the most difficult chip to apply. Firstly, we find the total number of points the team of the week for each of the 38 gameweeks achieved. Then, we find the total number of points that our inputted team achieved over the span of the same 38 gameweeks. Then, we create a list that finds the difference between these two. The gameweek with the greatest difference between the two is assigned the free hit chip. We do not add any points to our total points sum, but instead, we recalculate the points list to include our free hit chip. We will add the points for our free hit chip later.</p>
+<p>We will finally apply the wildcard and transfer constraint simultaneously. Firstly, we find the number of transfers between each of the 38 gameweeks, leaving us with 37 transfer periods. We assign the two wildcards to the two gameweeks with the highest number of transfers (not including the gameweek that already used the free hit chip). For all 34 other transfer periods (two removed for wildcard and one for free hit), we find the total number of transfers that were made between them. We subtract the number of free transfers available (34; one for each transfer period), leaving us with the total number of non-free transfers. We subtract four times this number from our total points count, hence adhering to the transfer constraint.</p>
+<p>Finally, we add all of the points in our points list from the starting XI to the total points. However, for every gameweek, we add the player that achieved the most points twice in order to satisfy captaincy. This way, we will satisfy the triple captain chip, because we have already added the player point total once. This will also add all the points attained from the free hit chip. Finally, this is the points total that we can finally output as our final points total.</p>
+<p>Let’s see if we can find the team with the highest points total by using this evaluate class in the next analysis section.</p>
+</section>
+</section>
+<section id="analysis" class="level2">
+<h2 class="anchored" data-anchor-id="analysis">Analysis</h2>
+<p>Now that we have an understanding of how each of the classes works, let’s use them together to find an optimal-scoring team, starting with the team of the year class. Let’s find the total number of points from the overall constrained team of the year over the 38 gameweeks.</p>
+<div class="cell" data-execution_count="87">
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>full_toty_constrained <span class="op">=</span> toty(<span class="dv">1</span>,<span class="dv">38</span>,constraints<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>full_toty_constrained.find_toty()</span>
+<span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a>starting_xi <span class="op">=</span> full_toty_constrained.find_elements()</span>
+<span id="cb45-4"><a href="#cb45-4" aria-hidden="true" tabindex="-1"></a>substitutes <span class="op">=</span> full_toty_constrained.find_subs()</span>
+<span id="cb45-5"><a href="#cb45-5" aria-hidden="true" tabindex="-1"></a>xi, subs <span class="op">=</span> [], []</span>
+<span id="cb45-6"><a href="#cb45-6" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> k <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>,<span class="dv">39</span>):</span>
+<span id="cb45-7"><a href="#cb45-7" aria-hidden="true" tabindex="-1"></a>    xi.append(starting_xi)</span>
+<span id="cb45-8"><a href="#cb45-8" aria-hidden="true" tabindex="-1"></a>    subs.append(substitutes)</span>
+<span id="cb45-9"><a href="#cb45-9" aria-hidden="true" tabindex="-1"></a>evaluation <span class="op">=</span> evaluate(xi, subs)</span>
+<span id="cb45-10"><a href="#cb45-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">The total number of points achieved by the team of the year is"</span>, evaluation.total_points())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>The Triple Captain Chip will be played in Gameweek 37 where the player Harry_Kane scored 31 points
+The Bench Boost Chip will be played in Gameweek 35 earning an extra 22 points
+The Free Hit Chip will be played in Gameweek 36 earning an extra 115 points
+The First Wilcard Chip will be played in Gameweek 2
+The Second Wildcard Chip will be played in Gameweek 20
+
+The total number of points achieved by the team of the year is 2829</code></pre>
+</div>
+</div>
+<p>This is a good start for finding the best possible team. We used the constrained team of the year that we found earlier, and applied the evaluate class, which found the total number of points, leading to a total point count of 2829. The triple captain chip was given to Harry Kane, who achieved 31 points in the 37th gameweek. The bench boost chip was played in gameweek 35, achieving an extra 22 points. This was the gameweek that the four substitutes overachieved. The free hit chip was played in gameweek 36 because the difference between our team and the team of the week was a staggering 115 points. The wildcards are not useful because we stayed with the same team over the course of the 38 gameweeks. Hence we got a baseline score of 2829.</p>
+<p>How can we improve this score? Instead of doing a team of the year that spans the 38 gameweeks, let’s find two teams of the year for the first half and second half of the season, and add them together. Let’s call this the 2-split team of the year. The code snippet below calculates this 2-split team of the year.</p>
+<div class="cell" data-execution_count="88">
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>full_toty_constrained_first_half <span class="op">=</span> toty(<span class="dv">1</span>,<span class="dv">19</span>,constraints<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a>full_toty_constrained_first_half.find_toty()</span>
+<span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a>starting_xi_first <span class="op">=</span> full_toty_constrained_first_half.find_elements()</span>
+<span id="cb47-4"><a href="#cb47-4" aria-hidden="true" tabindex="-1"></a>substitutes_first <span class="op">=</span> full_toty_constrained_first_half.find_subs()</span>
+<span id="cb47-5"><a href="#cb47-5" aria-hidden="true" tabindex="-1"></a>full_toty_constrained_second_half <span class="op">=</span> toty(<span class="dv">20</span>,<span class="dv">38</span>,constraints<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb47-6"><a href="#cb47-6" aria-hidden="true" tabindex="-1"></a>full_toty_constrained_second_half.find_toty()</span>
+<span id="cb47-7"><a href="#cb47-7" aria-hidden="true" tabindex="-1"></a>starting_xi_second <span class="op">=</span> full_toty_constrained_second_half.find_elements()</span>
+<span id="cb47-8"><a href="#cb47-8" aria-hidden="true" tabindex="-1"></a>substitutes_second <span class="op">=</span> full_toty_constrained_second_half.find_subs()</span>
+<span id="cb47-9"><a href="#cb47-9" aria-hidden="true" tabindex="-1"></a>xi, subs <span class="op">=</span> [], []</span>
+<span id="cb47-10"><a href="#cb47-10" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> k <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>,<span class="dv">20</span>):</span>
+<span id="cb47-11"><a href="#cb47-11" aria-hidden="true" tabindex="-1"></a>    xi.append(starting_xi_first)</span>
+<span id="cb47-12"><a href="#cb47-12" aria-hidden="true" tabindex="-1"></a>    subs.append(substitutes_first)</span>
+<span id="cb47-13"><a href="#cb47-13" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> k <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">20</span>,<span class="dv">39</span>):</span>
+<span id="cb47-14"><a href="#cb47-14" aria-hidden="true" tabindex="-1"></a>    xi.append(starting_xi_second)</span>
+<span id="cb47-15"><a href="#cb47-15" aria-hidden="true" tabindex="-1"></a>    subs.append(substitutes_second)</span>
+<span id="cb47-16"><a href="#cb47-16" aria-hidden="true" tabindex="-1"></a>evaluation <span class="op">=</span> evaluate(xi, subs)</span>
+<span id="cb47-17"><a href="#cb47-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">The total number of points achieved by the 2-split team of the year is"</span>, evaluation.total_points())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>The Triple Captain Chip will be played in Gameweek 37 where the player Harry_Kane scored 31 points
+The Bench Boost Chip will be played in Gameweek 23 earning an extra 25 points
+The Free Hit Chip will be played in Gameweek 5 earning an extra 107 points
+The First Wilcard Chip will be played in Gameweek 2
+The Second Wildcard Chip will be played in Gameweek 20
+
+The total number of points achieved by the 2-split team of the year is 3028</code></pre>
+</div>
+</div>
+<p>We see a significant increase in the total number of points achieved by this team of the year than the previous one. The total point score increases from 2829 to 3028, totalling an increase of 199 points. The triple captain chip remains the same, but the bench boost chip earns an extra 25 points. The free hit chip is now in fact played in gameweek 5, earning an extra 107 points. The second wildcard chip is very useful to be played in gameweek 20 because all of the transfers that we make halfway through the season are now made for free.</p>
+<p>We can expand this reasoning of a split further to become an n-split team of the year, where n is the number of teams of the year that we use. Let’s use this method to find the 19-split team of the year, which finds the best team for every two gameweek periods. The code snippet below executes this.</p>
+<div class="cell" data-execution_count="89">
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a>xi, subs <span class="op">=</span> [], []</span>
+<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> k <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>,<span class="dv">20</span>):</span>
+<span id="cb49-3"><a href="#cb49-3" aria-hidden="true" tabindex="-1"></a>    two_week_split <span class="op">=</span> toty(<span class="dv">2</span><span class="op">*</span>k<span class="op">-</span><span class="dv">1</span>,<span class="dv">2</span><span class="op">*</span>k,<span class="va">True</span>)</span>
+<span id="cb49-4"><a href="#cb49-4" aria-hidden="true" tabindex="-1"></a>    two_week_split.find_toty()</span>
+<span id="cb49-5"><a href="#cb49-5" aria-hidden="true" tabindex="-1"></a>    xi.append(two_week_split.find_elements())</span>
+<span id="cb49-6"><a href="#cb49-6" aria-hidden="true" tabindex="-1"></a>    xi.append(two_week_split.find_elements())</span>
+<span id="cb49-7"><a href="#cb49-7" aria-hidden="true" tabindex="-1"></a>    subs.append(two_week_split.find_subs())</span>
+<span id="cb49-8"><a href="#cb49-8" aria-hidden="true" tabindex="-1"></a>    subs.append(two_week_split.find_subs())</span>
+<span id="cb49-9"><a href="#cb49-9" aria-hidden="true" tabindex="-1"></a>evaluation <span class="op">=</span> evaluate(xi, subs)</span>
+<span id="cb49-10"><a href="#cb49-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">The total number of points achieved by the 19-split team of the year is"</span>, evaluation.total_points())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>The Triple Captain Chip will be played in Gameweek 37 where the player Harry_Kane scored 31 points
+The Bench Boost Chip will be played in Gameweek 38 earning an extra 8 points
+The Free Hit Chip will be played in Gameweek 28 earning an extra 62 points
+The First Wilcard Chip will be played in Gameweek 3
+The Second Wildcard Chip will be played in Gameweek 21
+
+The total number of points achieved by the 19-split team of the year is 3984</code></pre>
+</div>
+</div>
+<p>We now see a big jump from the 2-split team of the year to the 19-split team of the year. In fact, there has been an increase of almost 1000 points! The triple captain chip is still used on Harry Kane in Gameweek 37, whilst the bench boost and free hit chips are receiving lower returns than in the previous split. This is likely because the week-to-week teams are likely much closer to the optimal team of the week, so the gains seen by the chips are less. It seems as though there is a trend, which is the more splits that there are, the higher the point count, regardless of the higher number of transfers being made. Let’s see if this trend continues for the cumulative team of the week (or in other terms the 38-split team of the year), or if the transfer constraint severely decreases the number of points attained.</p>
+<div class="cell" data-execution_count="90">
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>totw_xi <span class="op">=</span> []</span>
+<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a>totw_subs <span class="op">=</span> []</span>
+<span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> k <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>,<span class="dv">39</span>):</span>
+<span id="cb51-4"><a href="#cb51-4" aria-hidden="true" tabindex="-1"></a>    r <span class="op">=</span> totw(k,constraints<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb51-5"><a href="#cb51-5" aria-hidden="true" tabindex="-1"></a>    totw_xi.append(r.find_elements())</span>
+<span id="cb51-6"><a href="#cb51-6" aria-hidden="true" tabindex="-1"></a>    totw_subs.append(r.find_subs())</span>
+<span id="cb51-7"><a href="#cb51-7" aria-hidden="true" tabindex="-1"></a>evaluation <span class="op">=</span> evaluate(totw_xi, totw_subs)</span>
+<span id="cb51-8"><a href="#cb51-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">The total number of points achieved by the team of the week is"</span>, evaluation.total_points())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>The Triple Captain Chip will be played in Gameweek 37 where the player Harry_Kane scored 31 points
+The Bench Boost Chip will be played in Gameweek 11 earning an extra 6 points
+The Free Hit Chip will be played in Gameweek 1 earning an extra 0 points
+The First Wilcard Chip will be played in Gameweek 3
+The Second Wildcard Chip will be played in Gameweek 25
+
+The total number of points achieved by the team of the week is 4176</code></pre>
+</div>
+</div>
+<p>The total number of points achieved by the team of the week is 4176. That’s an extra 192 points! Even though we effectively doubled the number of transfers we made from the previous split, we were still able to gain a significant number of points. This shows that the best way to tackle FPL is to find the weekly team of the week. Let’s take a look at the chips analysis in further detail. It makes sense that the triple captain chip is still used where it is because Harry Kane is the highest-scoring player in the 37th gameweek, as well as the entire season. The Bench Boost chip also remains at an extra six points, which is likely due to the high-point earning of the starting XI. The free hit chip earns an extra zero points because every gameweek is the team of the week, so it makes sense that no extra points are gained. 4176 seems like a great point score, but can we improve this? Earlier, we made a transfer-dependent cumulative team of the week. Let’s see if we minimise unnecessary transfers, we can improve the total score.</p>
+<div class="cell" data-execution_count="91">
+<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a>totw_xi_td <span class="op">=</span> []</span>
+<span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a>totw_subs_td <span class="op">=</span> []</span>
+<span id="cb53-3"><a href="#cb53-3" aria-hidden="true" tabindex="-1"></a>r <span class="op">=</span> totw(<span class="dv">1</span>,<span class="va">True</span>,<span class="va">True</span>)</span>
+<span id="cb53-4"><a href="#cb53-4" aria-hidden="true" tabindex="-1"></a>totw_xi_td.append(r.find_elements())</span>
+<span id="cb53-5"><a href="#cb53-5" aria-hidden="true" tabindex="-1"></a>totw_subs_td.append(r.find_subs())</span>
+<span id="cb53-6"><a href="#cb53-6" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> k <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2</span>,<span class="dv">39</span>):</span>
+<span id="cb53-7"><a href="#cb53-7" aria-hidden="true" tabindex="-1"></a>    r <span class="op">=</span> totw(k,constraints<span class="op">=</span><span class="va">True</span>,transfer_dependent<span class="op">=</span><span class="va">True</span>,prev_totw<span class="op">=</span>r.find_elements(),prev_subs<span class="op">=</span>r.find_subs())</span>
+<span id="cb53-8"><a href="#cb53-8" aria-hidden="true" tabindex="-1"></a>    totw_xi_td.append(r.find_elements())</span>
+<span id="cb53-9"><a href="#cb53-9" aria-hidden="true" tabindex="-1"></a>    totw_subs_td.append(r.find_subs())</span>
+<span id="cb53-10"><a href="#cb53-10" aria-hidden="true" tabindex="-1"></a>evaluation <span class="op">=</span> evaluate(totw_xi_td, totw_subs_td)</span>
+<span id="cb53-11"><a href="#cb53-11" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">The total number of points achieved by the transfer-dependent team of the week is"</span>, evaluation.total_points())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>The Triple Captain Chip will be played in Gameweek 37 where the player Harry_Kane scored 31 points
+The Bench Boost Chip will be played in Gameweek 11 earning an extra 6 points
+The Free Hit Chip will be played in Gameweek 38 earning an extra 8 points
+The First Wilcard Chip will be played in Gameweek 4
+The Second Wildcard Chip will be played in Gameweek 21
+
+The total number of points achieved by the transfer-dependent team of the week is 4391</code></pre>
+</div>
+</div>
+<p>And it has! We were able to increase the total score by over 200 points by removing unnecessary transfers that cost more than it was able to return in terms of points. An interesting point here is that the free hit chip was actually played in Gameweek 38, and gained an extra eight points. This is because it was cheaper to apply the team of the week on the 38th gameweek than make a few extra transfers in the 37th gameweek. Now that we have found the optimal team, let’s analyse this team and see what we can understand from it.</p>
+</section>
+<section id="results" class="level2">
+<h2 class="anchored" data-anchor-id="results">Results</h2>
+<p>We know that the optimal team is the transfer-dependent cumulative team of the week. Let’s take a closer look at this team by extracting the players and the points that they have achieved in every gameweek. The dataframe below shows every starting XI player for the optimal team and the number of points that they have achieved.</p>
+<div class="cell" data-execution_count="92">
+<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a>i <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a>names, points, prices, subs_prices <span class="op">=</span> [], [], [], []</span>
+<span id="cb55-3"><a href="#cb55-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> val <span class="kw">in</span> totw_xi_td:</span>
+<span id="cb55-4"><a href="#cb55-4" aria-hidden="true" tabindex="-1"></a>    df <span class="op">=</span> data(i)</span>
+<span id="cb55-5"><a href="#cb55-5" aria-hidden="true" tabindex="-1"></a>    temp_names, temp_points, temp_prices <span class="op">=</span> [], [], []</span>
+<span id="cb55-6"><a href="#cb55-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> k <span class="kw">in</span> val:</span>
+<span id="cb55-7"><a href="#cb55-7" aria-hidden="true" tabindex="-1"></a>        temp_names.append(df.loc[df[<span class="st">'unique_id'</span>]<span class="op">==</span>k].values.tolist()[<span class="dv">0</span>][<span class="dv">0</span>])</span>
+<span id="cb55-8"><a href="#cb55-8" aria-hidden="true" tabindex="-1"></a>        temp_prices.append(df.loc[df[<span class="st">'unique_id'</span>]<span class="op">==</span>k].values.tolist()[<span class="dv">0</span>][<span class="dv">2</span>])</span>
+<span id="cb55-9"><a href="#cb55-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">try</span>:</span>
+<span id="cb55-10"><a href="#cb55-10" aria-hidden="true" tabindex="-1"></a>            df.loc[df[<span class="st">'unique_id'</span>]<span class="op">==</span>k].values.tolist()[<span class="dv">0</span>][<span class="dv">1</span>] <span class="op">+</span> df.loc[df[<span class="st">'unique_id'</span>]<span class="op">==</span>k].values.tolist()[<span class="dv">1</span>][<span class="dv">1</span>]</span>
+<span id="cb55-11"><a href="#cb55-11" aria-hidden="true" tabindex="-1"></a>        <span class="cf">except</span>:</span>
+<span id="cb55-12"><a href="#cb55-12" aria-hidden="true" tabindex="-1"></a>            temp_points.append(df.loc[df[<span class="st">'unique_id'</span>]<span class="op">==</span>k].values.tolist()[<span class="dv">0</span>][<span class="dv">1</span>])</span>
+<span id="cb55-13"><a href="#cb55-13" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
+<span id="cb55-14"><a href="#cb55-14" aria-hidden="true" tabindex="-1"></a>            temp_points.append(df.loc[df[<span class="st">'unique_id'</span>]<span class="op">==</span>k].values.tolist()[<span class="dv">0</span>][<span class="dv">1</span>] <span class="op">+</span> df.loc[df[<span class="st">'unique_id'</span>]<span class="op">==</span>k].values.tolist()[<span class="dv">1</span>][<span class="dv">1</span>])</span>
+<span id="cb55-15"><a href="#cb55-15" aria-hidden="true" tabindex="-1"></a>    i <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb55-16"><a href="#cb55-16" aria-hidden="true" tabindex="-1"></a>    names.append(temp_names)</span>
+<span id="cb55-17"><a href="#cb55-17" aria-hidden="true" tabindex="-1"></a>    points.append(temp_points)</span>
+<span id="cb55-18"><a href="#cb55-18" aria-hidden="true" tabindex="-1"></a>    prices.append(temp_prices)</span>
+<span id="cb55-19"><a href="#cb55-19" aria-hidden="true" tabindex="-1"></a>i <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb55-20"><a href="#cb55-20" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> val <span class="kw">in</span> totw_subs_td:</span>
+<span id="cb55-21"><a href="#cb55-21" aria-hidden="true" tabindex="-1"></a>    df <span class="op">=</span> data(i)</span>
+<span id="cb55-22"><a href="#cb55-22" aria-hidden="true" tabindex="-1"></a>    temp_subs <span class="op">=</span> []</span>
+<span id="cb55-23"><a href="#cb55-23" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> k <span class="kw">in</span> val:</span>
+<span id="cb55-24"><a href="#cb55-24" aria-hidden="true" tabindex="-1"></a>        temp_subs.append(df.loc[df[<span class="st">'unique_id'</span>]<span class="op">==</span>k].values.tolist()[<span class="dv">0</span>][<span class="dv">2</span>])</span>
+<span id="cb55-25"><a href="#cb55-25" aria-hidden="true" tabindex="-1"></a>    subs_prices.append(temp_subs)</span>
+<span id="cb55-26"><a href="#cb55-26" aria-hidden="true" tabindex="-1"></a>    i <span class="op">+=</span><span class="dv">1</span></span>
+<span id="cb55-27"><a href="#cb55-27" aria-hidden="true" tabindex="-1"></a>dfz <span class="op">=</span> pd.DataFrame().assign(name<span class="op">=</span>names[<span class="dv">0</span>], points<span class="op">=</span>points[<span class="dv">0</span>])</span>
+<span id="cb55-28"><a href="#cb55-28" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> k <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>,<span class="dv">38</span>):</span>
+<span id="cb55-29"><a href="#cb55-29" aria-hidden="true" tabindex="-1"></a>    dfz <span class="op">=</span> pd.concat([dfz, pd.DataFrame().assign(name<span class="op">=</span>names[k], points<span class="op">=</span>points[k])], axis<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb55-30"><a href="#cb55-30" aria-hidden="true" tabindex="-1"></a>display(dfz)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>name</th>
+      <th>points</th>
+      <th>name</th>
+      <th>points</th>
+      <th>name</th>
+      <th>points</th>
+      <th>name</th>
+      <th>points</th>
+      <th>name</th>
+      <th>points</th>
+      <th>...</th>
+      <th>name</th>
+      <th>points</th>
+      <th>name</th>
+      <th>points</th>
+      <th>name</th>
+      <th>points</th>
+      <th>name</th>
+      <th>points</th>
+      <th>name</th>
+      <th>points</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Ben_Foster</td>
+      <td>10</td>
+      <td>Tom_Heaton</td>
+      <td>10</td>
+      <td>Lukasz_Fabianski</td>
+      <td>10</td>
+      <td>Maarten_Stekelenburg</td>
+      <td>6</td>
+      <td>Eldin_Jakupovic</td>
+      <td>7</td>
+      <td>...</td>
+      <td>David_de Gea</td>
+      <td>17</td>
+      <td>Eldin_Jakupovic</td>
+      <td>14</td>
+      <td>Fraser_Forster</td>
+      <td>17</td>
+      <td>Sergio_Romero</td>
+      <td>16</td>
+      <td>Jack_Butland</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>James_Collins</td>
+      <td>8</td>
+      <td>Curtis_Davies</td>
+      <td>12</td>
+      <td>Luke_Shaw</td>
+      <td>6</td>
+      <td>Adam_Smith</td>
+      <td>11</td>
+      <td>Kyle_Walker</td>
+      <td>8</td>
+      <td>...</td>
+      <td>Charlie_Daniels</td>
+      <td>14</td>
+      <td>Gary_Cahill</td>
+      <td>14</td>
+      <td>Billy_Jones</td>
+      <td>15</td>
+      <td>Kyle_Naughton</td>
+      <td>15</td>
+      <td>Vincent_Kompany</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Stephen_Kingsley</td>
+      <td>8</td>
+      <td>Gareth_McAuley</td>
+      <td>7</td>
+      <td>Gareth_McAuley</td>
+      <td>6</td>
+      <td>Kyle_Walker</td>
+      <td>11</td>
+      <td>Christian_Fuchs</td>
+      <td>12</td>
+      <td>...</td>
+      <td>Nacho_Monreal</td>
+      <td>12</td>
+      <td>Charlie_Daniels</td>
+      <td>6</td>
+      <td>Marcos_Alonso</td>
+      <td>14</td>
+      <td>Jeffrey_Schlupp</td>
+      <td>12</td>
+      <td>Geoff_Cameron</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Gareth_McAuley</td>
+      <td>7</td>
+      <td>Luke_Shaw</td>
+      <td>11</td>
+      <td>Antonio_Valencia</td>
+      <td>9</td>
+      <td>Laurent_Koscielny</td>
+      <td>10</td>
+      <td>Juan_Zuñiga</td>
+      <td>12</td>
+      <td>...</td>
+      <td>Harry_Maguire</td>
+      <td>9</td>
+      <td>Kieran_Trippier</td>
+      <td>9</td>
+      <td>Nicolás_Otamendi</td>
+      <td>14</td>
+      <td>Phil_Jagielka</td>
+      <td>12</td>
+      <td>Jonny_Evans</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Philippe_Coutinho</td>
+      <td>15</td>
+      <td>Manuel_Agudo Durán</td>
+      <td>13</td>
+      <td>Ben_Gibson</td>
+      <td>9</td>
+      <td>Heung-Min_Son</td>
+      <td>19</td>
+      <td>Seamus_Coleman</td>
+      <td>10</td>
+      <td>...</td>
+      <td>Marc_Pugh</td>
+      <td>14</td>
+      <td>Jose_Fonte</td>
+      <td>9</td>
+      <td>Vincent_Kompany</td>
+      <td>11</td>
+      <td>César_Azpilicueta</td>
+      <td>20</td>
+      <td>Georginio_Wijnaldum</td>
+      <td>14</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Anthony_Martial</td>
+      <td>11</td>
+      <td>Michail_Antonio</td>
+      <td>11</td>
+      <td>Scott_Dann</td>
+      <td>9</td>
+      <td>Roberto_Firmino</td>
+      <td>15</td>
+      <td>Nacer_Chadli</td>
+      <td>21</td>
+      <td>...</td>
+      <td>Anthony_Martial</td>
+      <td>17</td>
+      <td>Joshua_King</td>
+      <td>11</td>
+      <td>John_O'Shea</td>
+      <td>10</td>
+      <td>Philippe_Coutinho</td>
+      <td>19</td>
+      <td>André_Ayew</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Leroy_Fer</td>
+      <td>11</td>
+      <td>Shaun_Maloney</td>
+      <td>11</td>
+      <td>Alexis_Sánchez</td>
+      <td>16</td>
+      <td>Michail_Antonio</td>
+      <td>13</td>
+      <td>Kevin_De Bruyne</td>
+      <td>14</td>
+      <td>...</td>
+      <td>Marten_de Roon</td>
+      <td>12</td>
+      <td>Emre_Can</td>
+      <td>11</td>
+      <td>Kevin_De Bruyne</td>
+      <td>17</td>
+      <td>Heung-Min_Son</td>
+      <td>19</td>
+      <td>Victor_Wanyama</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Adam_Lallana</td>
+      <td>11</td>
+      <td>Victor_Wanyama</td>
+      <td>11</td>
+      <td>Raheem_Sterling</td>
+      <td>15</td>
+      <td>Kevin_De Bruyne</td>
+      <td>13</td>
+      <td>Andros_Townsend</td>
+      <td>14</td>
+      <td>...</td>
+      <td>Christian_Eriksen</td>
+      <td>11</td>
+      <td>Gylfi_Sigurdsson</td>
+      <td>10</td>
+      <td>Alex_Oxlade-Chamberlain</td>
+      <td>11</td>
+      <td>Alexis_Sánchez</td>
+      <td>27</td>
+      <td>Paul_Pogba</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Eden_Hazard</td>
+      <td>10</td>
+      <td>Gareth_Barry</td>
+      <td>10</td>
+      <td>Willian_Borges Da Silva</td>
+      <td>11</td>
+      <td>Etienne_Capoue</td>
+      <td>13</td>
+      <td>Theo_Walcott</td>
+      <td>13</td>
+      <td>...</td>
+      <td>Sam_Clucas</td>
+      <td>10</td>
+      <td>Pedro_Rodríguez Ledesma</td>
+      <td>10</td>
+      <td>Granit_Xhaka</td>
+      <td>14</td>
+      <td>Harry_Kane</td>
+      <td>31</td>
+      <td>Harry_Kane</td>
+      <td>17</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>Álvaro_Negredo</td>
+      <td>9</td>
+      <td>Sergio_Agüero</td>
+      <td>13</td>
+      <td>Eden_Hazard</td>
+      <td>11</td>
+      <td>Romelu_Lukaku</td>
+      <td>17</td>
+      <td>Romelu_Lukaku</td>
+      <td>12</td>
+      <td>...</td>
+      <td>Diego_Da Silva Costa</td>
+      <td>16</td>
+      <td>Sergio_Agüero</td>
+      <td>12</td>
+      <td>Cesc_Fàbregas</td>
+      <td>12</td>
+      <td>Gabriel Fernando_de Jesus</td>
+      <td>19</td>
+      <td>Sergio_Agüero</td>
+      <td>16</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>Sergio_Agüero</td>
+      <td>9</td>
+      <td>Cristhian_Stuani</td>
+      <td>13</td>
+      <td>Jermain_Defoe</td>
+      <td>9</td>
+      <td>Diego_Da Silva Costa</td>
+      <td>12</td>
+      <td>Islam_Slimani</td>
+      <td>13</td>
+      <td>...</td>
+      <td>Christian_Benteke</td>
+      <td>14</td>
+      <td>Álvaro_Negredo</td>
+      <td>11</td>
+      <td>Sam_Vokes</td>
+      <td>13</td>
+      <td>Olivier_Giroud</td>
+      <td>18</td>
+      <td>Fernando_Llorente</td>
+      <td>12</td>
+    </tr>
+  </tbody>
+</table>
+<p>11 rows × 76 columns</p>
+</div>
+</div>
+</div>
+<p>Although this is an interesting dataframe to see which players were selected for this optimal team, it is hard to extract any meaningful conclusions by just looking at the names and numbers. Let’s now check and see which players have been featured the most in this team. The table below shows the number of times each player has featured in the dataframe above, given that they have featured at least five times.</p>
+<div class="cell" data-execution_count="93">
+<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> data(<span class="dv">38</span>)</span>
+<span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a>list1 <span class="op">=</span> []</span>
+<span id="cb56-3"><a href="#cb56-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> val <span class="kw">in</span> totw_xi_td:</span>
+<span id="cb56-4"><a href="#cb56-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> k <span class="kw">in</span> val:</span>
+<span id="cb56-5"><a href="#cb56-5" aria-hidden="true" tabindex="-1"></a>        list1.append(df.loc[df[<span class="st">'unique_id'</span>]<span class="op">==</span>k].values.tolist()[<span class="dv">0</span>][<span class="dv">0</span>])</span>
+<span id="cb56-6"><a href="#cb56-6" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> pd.DataFrame(list1).value_counts()</span>
+<span id="cb56-7"><a href="#cb56-7" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> pd.DataFrame(t, columns<span class="op">=</span>[<span class="st">"features"</span>])</span>
+<span id="cb56-8"><a href="#cb56-8" aria-hidden="true" tabindex="-1"></a>z <span class="op">=</span> t[t[<span class="st">'features'</span>] <span class="op">&gt;</span> <span class="dv">4</span>]</span>
+<span id="cb56-9"><a href="#cb56-9" aria-hidden="true" tabindex="-1"></a>z</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="93">
+
+<div>
+
+<table class="dataframe table table-sm table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>features</th>
+    </tr>
+    <tr>
+      <th>0</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Harry_Kane</th>
+      <td>9</td>
+    </tr>
+    <tr>
+      <th>Christian_Eriksen</th>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>Alexis_Sánchez</th>
+      <td>8</td>
+    </tr>
+    <tr>
+      <th>Eden_Hazard</th>
+      <td>7</td>
+    </tr>
+    <tr>
+      <th>Sergio_Agüero</th>
+      <td>7</td>
+    </tr>
+    <tr>
+      <th>Romelu_Lukaku</th>
+      <td>7</td>
+    </tr>
+    <tr>
+      <th>Charlie_Daniels</th>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>Jermain_Defoe</th>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>Tom_Heaton</th>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>Kevin_De Bruyne</th>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>Gareth_McAuley</th>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>Pedro_Rodríguez Ledesma</th>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>Diego_Da Silva Costa</th>
+      <td>5</td>
+    </tr>
+    <tr>
+      <th>Heung-Min_Son</th>
+      <td>5</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+<p>By looking at the table above, we can see some very familiar names, including Harry Kane, who was the highest point scorer in Gameweek 37. In fact, Harry Kane, Christian Eriksen, Alexis Sanchez, Eden Hazard and Romelu Lukaku have all been featured in the optimal team of the year before, so it is no surprise that they top this list of the most features on the team of the week. Now, let’s check which teams appear most often in our cumulative transfer-dependent team of the week.</p>
+<div class="cell" data-execution_count="94">
+<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> data(<span class="dv">38</span>)</span>
+<span id="cb57-2"><a href="#cb57-2" aria-hidden="true" tabindex="-1"></a>team_list <span class="op">=</span> []</span>
+<span id="cb57-3"><a href="#cb57-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> val <span class="kw">in</span> totw_xi_td:</span>
+<span id="cb57-4"><a href="#cb57-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> k <span class="kw">in</span> val:</span>
+<span id="cb57-5"><a href="#cb57-5" aria-hidden="true" tabindex="-1"></a>        team_list.append(df.loc[df[<span class="st">'unique_id'</span>]<span class="op">==</span>k].values.tolist()[<span class="dv">0</span>])</span>
+<span id="cb57-6"><a href="#cb57-6" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame(team_list)</span>
+<span id="cb57-7"><a href="#cb57-7" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots()</span>
+<span id="cb57-8"><a href="#cb57-8" aria-hidden="true" tabindex="-1"></a>df[<span class="dv">4</span>].value_counts().sort_index().plot(ax <span class="op">=</span> ax, kind<span class="op">=</span><span class="st">'bar'</span>, title<span class="op">=</span><span class="st">'Number of appearances per team'</span>, xlabel <span class="op">=</span> <span class="st">'Encoded Team'</span>, ylabel<span class="op">=</span><span class="st">'Frequency'</span>)</span>
+<span id="cb57-9"><a href="#cb57-9" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><img src="optimiser_files/figure-html/cell-30-output-1.png" class="img-fluid"></p>
+</div>
+</div>
+<p>We can see from the data above that the teams who generally made the highest number of appearances were the encoded teams 4, 17, and 10. These teams are Chelsea, Tottenham, and Manchester City respectively. Each of these teams has had over 30 appearances in the optimal team of the year. This makes sense, as these teams ended the season in the top 3 of the Premier League. This is compared to encoded team 15, Sunderland, which had only 11 appearances in this dataset. Sunderland ended the season being relegated to the Championship, so it makes sense that they did not make many appearances on this list.</p>
+<p>Let’s check the total number of points achieved by gameweek next.</p>
+<div class="cell" data-execution_count="95">
+<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a>points_sum <span class="op">=</span> []</span>
+<span id="cb58-2"><a href="#cb58-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> val <span class="kw">in</span> points:</span>
+<span id="cb58-3"><a href="#cb58-3" aria-hidden="true" tabindex="-1"></a>    points_sum.append(<span class="bu">sum</span>(val))</span>
+<span id="cb58-4"><a href="#cb58-4" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame(points_sum)</span>
+<span id="cb58-5"><a href="#cb58-5" aria-hidden="true" tabindex="-1"></a>df.index <span class="op">=</span> df.index<span class="op">+</span><span class="dv">1</span></span>
+<span id="cb58-6"><a href="#cb58-6" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots()</span>
+<span id="cb58-7"><a href="#cb58-7" aria-hidden="true" tabindex="-1"></a>df[<span class="dv">0</span>].sort_index().plot(ax <span class="op">=</span> ax, kind<span class="op">=</span><span class="st">'bar'</span>, title<span class="op">=</span><span class="st">'Number of points per Gameweek'</span>, xlabel <span class="op">=</span> <span class="st">'Gameweek'</span>, ylabel<span class="op">=</span><span class="st">'Points'</span>)</span>
+<span id="cb58-8"><a href="#cb58-8" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><img src="optimiser_files/figure-html/cell-31-output-1.png" class="img-fluid"></p>
+</div>
+</div>
+<p>The vast majority of gameweeks had a total number of points scored between 100 and 150, which is good. The only gameweek to vary far from this range is the 37th gameweek. The 37th gameweek is interesting because it is a double gameweek. As a reminder, a double gameweek occurs when one team plays more than once, so the combined score from both games is what each player gets. For example, Harry Kane attained a grand total of 31 points in this gameweek. This is because his team, Tottenham, played two games in this gameweek, leading to a superior points total. Most other teams had a double gameweek in gameweek 37, which is a reason why the total points for this gameweek are almost double the average gameweek total points. Let’s next take a look at how much money we spent over the 38 gameweeks.</p>
+<div class="cell" data-execution_count="96">
+<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a>prices_sum <span class="op">=</span> []</span>
+<span id="cb59-2"><a href="#cb59-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> val <span class="kw">in</span> prices:</span>
+<span id="cb59-3"><a href="#cb59-3" aria-hidden="true" tabindex="-1"></a>    prices_sum.append(<span class="dv">100</span> <span class="op">-</span> <span class="bu">sum</span>(val))</span>
+<span id="cb59-4"><a href="#cb59-4" aria-hidden="true" tabindex="-1"></a>i <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb59-5"><a href="#cb59-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> val <span class="kw">in</span> subs_prices:</span>
+<span id="cb59-6"><a href="#cb59-6" aria-hidden="true" tabindex="-1"></a>    prices_sum[i] <span class="op">-=</span> (<span class="bu">sum</span>(val))</span>
+<span id="cb59-7"><a href="#cb59-7" aria-hidden="true" tabindex="-1"></a>    i <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb59-8"><a href="#cb59-8" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame(prices_sum)</span>
+<span id="cb59-9"><a href="#cb59-9" aria-hidden="true" tabindex="-1"></a>df.index <span class="op">=</span> df.index<span class="op">+</span><span class="dv">1</span></span>
+<span id="cb59-10"><a href="#cb59-10" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots()</span>
+<span id="cb59-11"><a href="#cb59-11" aria-hidden="true" tabindex="-1"></a>df[<span class="dv">0</span>].sort_index().plot(ax <span class="op">=</span> ax, kind<span class="op">=</span><span class="st">'bar'</span>, title<span class="op">=</span><span class="st">'Money Left Over per Gameweek'</span>, xlabel <span class="op">=</span> <span class="st">'Gameweek'</span>, ylabel<span class="op">=</span><span class="st">'Money Left Over'</span>)</span>
+<span id="cb59-12"><a href="#cb59-12" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><img src="optimiser_files/figure-html/cell-32-output-1.png" class="img-fluid"></p>
+</div>
+</div>
+<p>Here is another interesting plot. We have £100 million to spend over every gameweek, but there are a lot of gameweeks where we spend a lot less than this total value. This means that in general, the teams of the week can be found using less than £100 million and that more expensive players do not necessarily result in more points on a week-to-week basis. This means that we have the capacity to invest in more expensive substitutes, which may lead to a higher points total for the bench boost chip.</p>
+</section>
+<section id="discussion-conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="discussion-conclusion">Discussion &amp; Conclusion</h2>
+<p>Through the analysis of the 2016-2017 FPL gameweek datasets, we were able to find an optimised team that maximises the total number of points whilst adhering to the multiple constraints that the game induces on the manager. By picking the highest-scoring players every week and desirably playing the wildcard and chips, we were able to attain a grand total of 4359 points over the course of the season using the cumulative transfer-dependent constrained team of the week methodology. We were able to manipulate dataframes and extract the meaningful columns, as well as attempt different methods of achieving a high grand total, including the team of the week and team of the year approaches.</p>
+<p>There are, however, limitations to the analysis that has been done. Most notably, the method in which we find the optimal substitutes is slightly flawed, resulting in low bench boost results. Furthermore, in FPL, the prices of players fluctuate throughout the season, so the selling price changes over time if the manager decides to keep it. This has not been implemented in the project. A third limitation is the weekly free transfers. This project assigns 34 free transfers per season rather than one per gameweek. These limitations can serve as future tasks that can be implemented to hopefully find a more accurate points value. However, the 4359 points that were attained in this project can definitely serve as a benchmark for future endeavours.</p>
+<p>In the grand scheme of things, this analysis can be the first step in building a machine learning predictive model to build an optimal team for the upcoming 2023-2024 Premier League season. With further analysis of the cumulative transfer-dependent constrained team of the week in this project, and extracting important features, we can start building a predictive model to hopefully optimise the points FPL points for a future season.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
